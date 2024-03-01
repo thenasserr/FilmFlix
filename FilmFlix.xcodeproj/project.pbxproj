@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DB22B926AD700FC6AF7 /* AppDelegate.swift */; };
 		D6724DB52B926AD700FC6AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DB42B926AD700FC6AF7 /* SceneDelegate.swift */; };
-		D6724DB72B926AD700FC6AF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DB62B926AD700FC6AF7 /* ViewController.swift */; };
 		D6724DBC2B926AD900FC6AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6724DBB2B926AD900FC6AF7 /* Assets.xcassets */; };
 		D6724DBF2B926AD900FC6AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6724DBD2B926AD900FC6AF7 /* LaunchScreen.storyboard */; };
 		D6724DCA2B926AD900FC6AF7 /* FilmFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DC92B926AD900FC6AF7 /* FilmFlixTests.swift */; };
@@ -19,6 +18,15 @@
 		D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */; };
 		D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DEF2B926F1600FC6AF7 /* Strings+Generated.swift */; };
 		D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */; };
+		D6724DF82B92777F00FC6AF7 /* TabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DF72B92777F00FC6AF7 /* TabBarType.swift */; };
+		D6724DFA2B9277B600FC6AF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DF92B9277B600FC6AF7 /* TabBarViewModel.swift */; };
+		D6724DFC2B9277DE00FC6AF7 /* TabBarViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DFB2B9277DE00FC6AF7 /* TabBarViewControlle.swift */; };
+		D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DFD2B92781800FC6AF7 /* TabBar.swift */; };
+		D6724E002B92783F00FC6AF7 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DFF2B92783F00FC6AF7 /* TabBarItem.swift */; };
+		D6724E032B92785D00FC6AF7 /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = D6724E022B92785D00FC6AF7 /* MakeConstraints */; };
+		D6724E072B9279A800FC6AF7 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E062B9279A800FC6AF7 /* MainWindow.swift */; };
+		D6724E0A2B9279DE00FC6AF7 /* +topMostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E092B9279DE00FC6AF7 /* +topMostViewController.swift */; };
+		D6724E0E2B927CF200FC6AF7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6724E0D2B927CF200FC6AF7 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +50,6 @@
 		D6724DAF2B926AD700FC6AF7 /* FilmFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6724DB22B926AD700FC6AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6724DB42B926AD700FC6AF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6724DB62B926AD700FC6AF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6724DBB2B926AD900FC6AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6724DBE2B926AD900FC6AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6724DC02B926AD900FC6AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +62,14 @@
 		D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		D6724DEF2B926F1600FC6AF7 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D6724DF72B92777F00FC6AF7 /* TabBarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarType.swift; sourceTree = "<group>"; };
+		D6724DF92B9277B600FC6AF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		D6724DFB2B9277DE00FC6AF7 /* TabBarViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControlle.swift; sourceTree = "<group>"; };
+		D6724DFD2B92781800FC6AF7 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D6724DFF2B92783F00FC6AF7 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		D6724E062B9279A800FC6AF7 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		D6724E092B9279DE00FC6AF7 /* +topMostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+topMostViewController.swift"; sourceTree = "<group>"; };
+		D6724E0D2B927CF200FC6AF7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6724E032B92785D00FC6AF7 /* MakeConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +104,7 @@
 				D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */,
 				D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */,
 				D6724DB12B926AD700FC6AF7 /* FilmFlix */,
+				D6724E042B92798B00FC6AF7 /* Utilities */,
 				D6724DE42B926B1E00FC6AF7 /* Resources */,
 				D6724DC82B926AD900FC6AF7 /* FilmFlixTests */,
 				D6724DD22B926AD900FC6AF7 /* FilmFlixUITests */,
@@ -108,11 +125,9 @@
 		D6724DB12B926AD700FC6AF7 /* FilmFlix */ = {
 			isa = PBXGroup;
 			children = (
+				D6724DF42B92775500FC6AF7 /* Scenes */,
 				D6724DB22B926AD700FC6AF7 /* AppDelegate.swift */,
 				D6724DB42B926AD700FC6AF7 /* SceneDelegate.swift */,
-				D6724DB62B926AD700FC6AF7 /* ViewController.swift */,
-				D6724DBB2B926AD900FC6AF7 /* Assets.xcassets */,
-				D6724DBD2B926AD900FC6AF7 /* LaunchScreen.storyboard */,
 				D6724DC02B926AD900FC6AF7 /* Info.plist */,
 			);
 			path = FilmFlix;
@@ -138,8 +153,10 @@
 		D6724DE42B926B1E00FC6AF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6724E0F2B927F4800FC6AF7 /* LaunchScreen */,
 				D6724DE62B926B3B00FC6AF7 /* Localization */,
 				D6724DE52B926B3100FC6AF7 /* Generated */,
+				D6724E102B927F5400FC6AF7 /* Assets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -160,6 +177,76 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		D6724DF42B92775500FC6AF7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DF52B92775C00FC6AF7 /* TabBarController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D6724DF52B92775C00FC6AF7 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DF72B92777F00FC6AF7 /* TabBarType.swift */,
+				D6724DF92B9277B600FC6AF7 /* TabBarViewModel.swift */,
+				D6724DFB2B9277DE00FC6AF7 /* TabBarViewControlle.swift */,
+				D6724DFD2B92781800FC6AF7 /* TabBar.swift */,
+				D6724DFF2B92783F00FC6AF7 /* TabBarItem.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		D6724E042B92798B00FC6AF7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E0C2B927A1000FC6AF7 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D6724E052B92799200FC6AF7 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E062B9279A800FC6AF7 /* MainWindow.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		D6724E082B9279C500FC6AF7 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E092B9279DE00FC6AF7 /* +topMostViewController.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D6724E0C2B927A1000FC6AF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E082B9279C500FC6AF7 /* UIViewController */,
+				D6724E052B92799200FC6AF7 /* UIApplication */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6724E0F2B927F4800FC6AF7 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DBD2B926AD900FC6AF7 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		D6724E102B927F5400FC6AF7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DBB2B926AD900FC6AF7 /* Assets.xcassets */,
+				D6724E0D2B927CF200FC6AF7 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +265,9 @@
 			dependencies = (
 			);
 			name = FilmFlix;
+			packageProductDependencies = (
+				D6724E022B92785D00FC6AF7 /* MakeConstraints */,
+			);
 			productName = FilmFlix;
 			productReference = D6724DAF2B926AD700FC6AF7 /* FilmFlix.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +340,9 @@
 				Base,
 			);
 			mainGroup = D6724DA62B926AD700FC6AF7;
+			packageReferences = (
+				D6724E012B92785D00FC6AF7 /* XCRemoteSwiftPackageReference "MakeConstraints" */,
+			);
 			productRefGroup = D6724DB02B926AD700FC6AF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +362,7 @@
 				D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */,
 				D6724DE82B926B4800FC6AF7 /* Localizable.strings in Resources */,
 				D6724DBF2B926AD900FC6AF7 /* LaunchScreen.storyboard in Resources */,
+				D6724E0E2B927CF200FC6AF7 /* Colors.xcassets in Resources */,
 				D6724DBC2B926AD900FC6AF7 /* Assets.xcassets in Resources */,
 				D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */,
 			);
@@ -334,9 +428,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6724DB72B926AD700FC6AF7 /* ViewController.swift in Sources */,
+				D6724DFC2B9277DE00FC6AF7 /* TabBarViewControlle.swift in Sources */,
+				D6724E072B9279A800FC6AF7 /* MainWindow.swift in Sources */,
+				D6724DF82B92777F00FC6AF7 /* TabBarType.swift in Sources */,
+				D6724E0A2B9279DE00FC6AF7 /* +topMostViewController.swift in Sources */,
+				D6724E002B92783F00FC6AF7 /* TabBarItem.swift in Sources */,
+				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
 				D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */,
+				D6724DFA2B9277B600FC6AF7 /* TabBarViewModel.swift in Sources */,
 				D6724DB52B926AD700FC6AF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +776,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6724E012B92785D00FC6AF7 /* XCRemoteSwiftPackageReference "MakeConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/MakeConstraints";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6724E022B92785D00FC6AF7 /* MakeConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6724E012B92785D00FC6AF7 /* XCRemoteSwiftPackageReference "MakeConstraints" */;
+			productName = MakeConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6724DA72B926AD700FC6AF7 /* Project object */;
 }
