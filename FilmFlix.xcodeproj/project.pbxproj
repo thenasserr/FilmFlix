@@ -16,6 +16,10 @@
 		D6724DCA2B926AD900FC6AF7 /* FilmFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DC92B926AD900FC6AF7 /* FilmFlixTests.swift */; };
 		D6724DD42B926AD900FC6AF7 /* FilmFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DD32B926AD900FC6AF7 /* FilmFlixUITests.swift */; };
 		D6724DD62B926AD900FC6AF7 /* FilmFlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DD52B926AD900FC6AF7 /* FilmFlixUITestsLaunchTests.swift */; };
+		D6724DE82B926B4800FC6AF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6724DE72B926B4800FC6AF7 /* Localizable.strings */; };
+		D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */; };
+		D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724DEF2B926F1600FC6AF7 /* Strings+Generated.swift */; };
+		D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		D6724DCF2B926AD900FC6AF7 /* FilmFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6724DD32B926AD900FC6AF7 /* FilmFlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlixUITests.swift; sourceTree = "<group>"; };
 		D6724DD52B926AD900FC6AF7 /* FilmFlixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6724DE72B926B4800FC6AF7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		D6724DEF2B926F1600FC6AF7 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,10 @@
 		D6724DA62B926AD700FC6AF7 = {
 			isa = PBXGroup;
 			children = (
+				D6724DF12B926FF700FC6AF7 /* .swiftlint.yml */,
+				D6724DEE2B926C8F00FC6AF7 /* swiftgen.yml */,
 				D6724DB12B926AD700FC6AF7 /* FilmFlix */,
+				D6724DE42B926B1E00FC6AF7 /* Resources */,
 				D6724DC82B926AD900FC6AF7 /* FilmFlixTests */,
 				D6724DD22B926AD900FC6AF7 /* FilmFlixUITests */,
 				D6724DB02B926AD700FC6AF7 /* Products */,
@@ -127,6 +138,31 @@
 			path = FilmFlixUITests;
 			sourceTree = "<group>";
 		};
+		D6724DE42B926B1E00FC6AF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DE62B926B3B00FC6AF7 /* Localization */,
+				D6724DE52B926B3100FC6AF7 /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6724DE52B926B3100FC6AF7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DEF2B926F1600FC6AF7 /* Strings+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		D6724DE62B926B3B00FC6AF7 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DE72B926B4800FC6AF7 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +170,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6724DD92B926AD900FC6AF7 /* Build configuration list for PBXNativeTarget "FilmFlix" */;
 			buildPhases = (
+				D6724DE92B926B6300FC6AF7 /* swiftgen */,
+				D6724DF32B92700300FC6AF7 /* swiftlint */,
 				D6724DAB2B926AD700FC6AF7 /* Sources */,
 				D6724DAC2B926AD700FC6AF7 /* Frameworks */,
 				D6724DAD2B926AD700FC6AF7 /* Resources */,
@@ -231,9 +269,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */,
+				D6724DE82B926B4800FC6AF7 /* Localizable.strings in Resources */,
 				D6724DBF2B926AD900FC6AF7 /* LaunchScreen.storyboard in Resources */,
 				D6724DBC2B926AD900FC6AF7 /* Assets.xcassets in Resources */,
 				D6724DBA2B926AD700FC6AF7 /* Main.storyboard in Resources */,
+				D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +294,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D6724DE92B926B6300FC6AF7 /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: get not installed, download from https://github.com/realm/SwiftLint\"\nfi \n\n";
+		};
+		D6724DF32B92700300FC6AF7 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D6724DAB2B926AD700FC6AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +340,7 @@
 			files = (
 				D6724DB72B926AD700FC6AF7 /* ViewController.swift in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
+				D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */,
 				D6724DB52B926AD700FC6AF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z9VC2L39AT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FilmFlix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,6 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z9VC2L39AT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FilmFlix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
