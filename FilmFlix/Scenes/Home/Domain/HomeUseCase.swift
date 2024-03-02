@@ -44,6 +44,12 @@ class HomeUseCase: HomeUseCaseProtocol {
             sections.append(layout)
         }
         
+        let topRated = try await trendingMoviesAPIService.fetchTopRated()
+        if let topRated = topRated.results {
+            let layout = factory.createSection(type: .topRated(topRated), delegate: delegate, title: L10n.Home.Trending.topRated)
+            sections.append(layout)
+        }
+        
         return sections
     }
 }

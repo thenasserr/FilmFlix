@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias HomeSectionsDelegate = TrendingMoviesSectionDelegate & TrendingTVsSectionDelegate
+typealias HomeSectionsDelegate = TrendingMoviesSectionDelegate & TrendingTVsSectionDelegate & TopRatedSectionDelegate
 
 class HomeViewModel {
     
@@ -28,6 +28,10 @@ class HomeViewModel {
 
 // MARK: - HomeViewModel Sections Delegate Methods
 extension HomeViewModel: HomeSectionsDelegate {
+    func topRatedSection(_ section: TopRatedSection, didSelect item: Movie) {
+        print(item)
+    }
+    
     func trendingTVsSection(_ section: TrendingTVsSection, didSelect item: Movie) {
         print(item)
     }

@@ -11,6 +11,7 @@ enum SectionsTypes {
     case trendingMovies([Movie])
     case trendingTVs([Movie])
     case populars([Movie])
+    case topRated([Movie])
 }
 
 class HomeFactory {
@@ -23,7 +24,8 @@ class HomeFactory {
                 return TrendingTVsSection(items: trending, delegate: delegate, sectionHeaderTitle: title)
             case .populars(let trending):
                 return TrendingMoviesSection(items: trending, delegate: delegate, sectionHeaderTitle: title)
-
+            case .topRated(let topRated):
+                return TopRatedSection(items: topRated, delegate: delegate, sectionHeaderTitle: title)
         }
     }
     

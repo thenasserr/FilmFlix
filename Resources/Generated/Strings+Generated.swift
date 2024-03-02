@@ -21,6 +21,8 @@ internal enum L10n {
       internal static let movies = L10n.tr("Localizable", "home.trending.movies", fallback: "Trending Movies")
       /// Populars
       internal static let populars = L10n.tr("Localizable", "home.trending.populars", fallback: "Populars")
+      /// Top Rated
+      internal static let topRated = L10n.tr("Localizable", "home.trending.topRated", fallback: "Top Rated")
       /// Trending TVs
       internal static let tvs = L10n.tr("Localizable", "home.trending.tvs", fallback: "Trending TVs")
     }

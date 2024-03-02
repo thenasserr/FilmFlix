@@ -10,13 +10,15 @@ import Foundation
 enum DataEndpoint {
     case fetchMovies
     case fetchTVs
-    case fetchPobulars
+    case fetchPopulars
+    case fetchTopRated
     
     struct Constants {
         static let baseUrl = "https://api.themoviedb.org"
         static let moviesPath = "/3/trending/movie/day?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
         static let tvsPath = "/3/trending/tv/day?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
         static let populars = "/3/movie/popular?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
+        static let topRated = "/3/movie/top_rated?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
     }
 }
 
@@ -32,8 +34,10 @@ extension DataEndpoint: Endpoint {
                 return Constants.moviesPath
             case .fetchTVs:
                 return Constants.tvsPath
-            case .fetchPobulars:
+            case .fetchPopulars:
                 return Constants.populars
+            case .fetchTopRated:
+                return Constants.topRated
         }
     }
     
@@ -43,7 +47,9 @@ extension DataEndpoint: Endpoint {
                 return .get
             case .fetchTVs:
                 return .get
-            case .fetchPobulars:
+            case .fetchPopulars:
+                return .get
+            case .fetchTopRated:
                 return .get
         }
     }
@@ -54,7 +60,9 @@ extension DataEndpoint: Endpoint {
                 return nil
             case .fetchTVs:
                 return nil
-            case .fetchPobulars:
+            case .fetchPopulars:
+                return nil
+            case .fetchTopRated:
                 return nil
         }
     }

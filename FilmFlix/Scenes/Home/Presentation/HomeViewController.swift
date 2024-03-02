@@ -28,7 +28,7 @@ class HomeViewController: UICollectionViewController {
         super.viewDidLoad()
         title = "Home"
         let titleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes        
         getSections()
     }
     

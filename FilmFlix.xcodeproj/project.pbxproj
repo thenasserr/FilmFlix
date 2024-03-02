@@ -61,6 +61,9 @@
 		D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E6B2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift */; };
 		D6724E6E2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E6C2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib */; };
 		D6724E702B93B27F00FC6AF7 /* TrendingTVsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E6F2B93B27F00FC6AF7 /* TrendingTVsSection.swift */; };
+		D6724E732B93DF0A00FC6AF7 /* TopRatedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E722B93DF0A00FC6AF7 /* TopRatedSection.swift */; };
+		D6724E782B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E762B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift */; };
+		D6724E792B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +141,9 @@
 		D6724E6B2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTVsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6724E6C2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingTVsCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6724E6F2B93B27F00FC6AF7 /* TrendingTVsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTVsSection.swift; sourceTree = "<group>"; };
+		D6724E722B93DF0A00FC6AF7 /* TopRatedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedSection.swift; sourceTree = "<group>"; };
+		D6724E762B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRatedCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +379,7 @@
 		D6724E182B9282A500FC6AF7 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				D6724E712B93DEBE00FC6AF7 /* TopRatedSection */,
 				D6724E6A2B93B1E700FC6AF7 /* TrendingTVsSection */,
 				D6724E1B2B9287C400FC6AF7 /* TrendingMoviesSection */,
 			);
@@ -501,6 +508,16 @@
 			path = TrendingTVsSection;
 			sourceTree = "<group>";
 		};
+		D6724E712B93DEBE00FC6AF7 /* TopRatedSection */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E722B93DF0A00FC6AF7 /* TopRatedSection.swift */,
+				D6724E762B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift */,
+				D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */,
+			);
+			path = TopRatedSection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -616,6 +633,7 @@
 				D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */,
 				D6724DE82B926B4800FC6AF7 /* Localizable.strings in Resources */,
 				D6724E562B93890600FC6AF7 /* Poppins-SemiBold.ttf in Resources */,
+				D6724E792B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib in Resources */,
 				D6724E582B93890600FC6AF7 /* Poppins-Medium.ttf in Resources */,
 				D6724E3F2B928DD700FC6AF7 /* HeaderCollectionReusableView.xib in Resources */,
 				D6724DBF2B926AD900FC6AF7 /* LaunchScreen.storyboard in Resources */,
@@ -704,6 +722,7 @@
 				D6724E592B93890600FC6AF7 /* Fonts.swift in Sources */,
 				D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */,
 				D6724E132B92823700FC6AF7 /* SectionsLayout.swift in Sources */,
+				D6724E782B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift in Sources */,
 				D6724E1A2B9282B500FC6AF7 /* HomeUseCase.swift in Sources */,
 				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
 				D6724E422B928EFD00FC6AF7 /* HomeViewController.swift in Sources */,
@@ -721,6 +740,7 @@
 				D6724E5C2B938C5E00FC6AF7 /* Router.swift in Sources */,
 				D6724E292B928AC100FC6AF7 /* EndPoint.swift in Sources */,
 				D6724E2B2B928AC100FC6AF7 /* BaseAPI.swift in Sources */,
+				D6724E732B93DF0A00FC6AF7 /* TopRatedSection.swift in Sources */,
 				D6724DFA2B9277B600FC6AF7 /* TabBarViewModel.swift in Sources */,
 				D6724E462B928F8300FC6AF7 /* HomeFactory.swift in Sources */,
 				D6724DB52B926AD700FC6AF7 /* SceneDelegate.swift in Sources */,
@@ -907,6 +927,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -935,6 +956,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

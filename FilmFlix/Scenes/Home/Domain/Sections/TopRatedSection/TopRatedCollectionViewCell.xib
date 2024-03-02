@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TopRatedCollectionViewCell" customModule="FilmFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="290"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-Fz-oCf">
+                        <rect key="frame" x="5" y="5" width="165" height="280"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JGP-6I-6Ru">
+                                <rect key="frame" x="5" y="0.0" width="155" height="170"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-V3-pMo">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="agi-4C-l2O"/>
+                                            <constraint firstAttribute="height" constant="170" id="ung-nA-4O8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-vT-Y7H">
+                                <rect key="frame" x="62" y="170" width="41.333333333333343" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzD-O6-pb7">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0M-5b-hJV">
+                                        <rect key="frame" x="0.0" y="55" width="41.333333333333336" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="aKU-Fz-oCf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="5nj-Vh-27G"/>
+                <constraint firstAttribute="bottom" secondItem="aKU-Fz-oCf" secondAttribute="bottom" constant="5" id="j9M-Qx-3Xg"/>
+                <constraint firstItem="aKU-Fz-oCf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="jYv-BO-xfg"/>
+                <constraint firstAttribute="trailing" secondItem="aKU-Fz-oCf" secondAttribute="trailing" constant="5" id="zgm-Jn-TCR"/>
+            </constraints>
+            <size key="customSize" width="175" height="290"/>
+            <connections>
+                <outlet property="containerView" destination="aKU-Fz-oCf" id="4QH-1r-PT8"/>
+                <outlet property="movieImage" destination="UTI-V3-pMo" id="4ZK-AE-LpW"/>
+                <outlet property="movieOverview" destination="Q0M-5b-hJV" id="mAC-G7-HpI"/>
+                <outlet property="movieTitle" destination="kzD-O6-pb7" id="Bqe-iF-OgF"/>
+            </connections>
+            <point key="canvasLocation" x="202.29007633587784" y="104.22535211267606"/>
+        </collectionViewCell>
+    </objects>
+</document>
