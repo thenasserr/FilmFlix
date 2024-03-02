@@ -28,9 +28,16 @@ class HomeUseCase: HomeUseCaseProtocol {
         var sections: [any SectionsLayout] = []
         
         if let trendingMovies = trendingMovies.results {
-            let layout = factory.createSection(type: .trendingMovies(trendingMovies), delegate: delegate)
+            let layout = factory.createSection(type: .trendingMovies(trendingMovies), delegate: delegate, title: L10n.Home.Trending.movies)
             sections.append(layout)
         }
+        
+        let trendingTVs = try await trendingMoviesAPIService.fetchTVs()
+        if let trendingTVs = trendingTVs.results {
+            let layout = factory.createSection(type: .trendingTVs(trendingTVs), delegate: delegate, title: L10n.Home.Trending.tvs)
+            sections.append(layout)
+        }
+        
         return sections
     }
 }

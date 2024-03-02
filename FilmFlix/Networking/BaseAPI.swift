@@ -18,8 +18,11 @@ protocol BaseAPI {
 
 extension BaseAPI {
     func fetch<T>(endpoint: Endpoint, type: T.Type) async throws -> T where T: Decodable {
-        var url = URL(string: "https://api.themoviedb.org/3/trending/movie/day?api_key=ad34c2ce43a8071dfe7bb834f3b99937")
-        // swiftlint:disable all
+//        var urlRequest = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path))
+        //swiftlint:disable all
+        let baseURL = endpoint.baseURL
+        let baseAppend = baseURL.appendingPathComponent(endpoint.path).absoluteString.removingPercentEncoding
+        let url = URL(string: baseAppend!)
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = endpoint.method.rawValue
         endpoint.headers?.forEach {

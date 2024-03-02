@@ -15,6 +15,14 @@ internal enum L10n {
   /// 
   ///   Created by Ibrahim Nasser Ibrahim on 01/03/2024.
   internal static let home = L10n.tr("Localizable", "home", fallback: "Home")
+  internal enum Home {
+    internal enum Trending {
+      /// Trending Movies
+      internal static let movies = L10n.tr("Localizable", "home.trending.movies", fallback: "Trending Movies")
+      /// Trending TVs
+      internal static let tvs = L10n.tr("Localizable", "home.trending.tvs", fallback: "Trending TVs")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

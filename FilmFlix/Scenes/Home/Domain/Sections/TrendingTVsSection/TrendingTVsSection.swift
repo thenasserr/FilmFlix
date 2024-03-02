@@ -1,5 +1,5 @@
 //
-//  TrendingMoviesSection.swift
+//  TrendingTVsSection.swift
 //  FilmFlix
 //
 //  Created by Ibrahim Nasser Ibrahim on 02/03/2024.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-protocol TrendingMoviesSectionDelegate: AnyObject {
-    func trendingMoviesSection(_ section: TrendingMoviesSection, didSelect item: Movie)
+protocol TrendingTVsSectionDelegate: AnyObject {
+    func trendingTVsSection(_ section: TrendingTVsSection, didSelect item: Movie)
 }
 
-class TrendingMoviesSection: SectionsLayout {
+class TrendingTVsSection: SectionsLayout {
     typealias ItemsType = Movie
     
     var items: [Movie] = []
-        
-    var sectionHeaderTitle: String
-
-    weak var delegate: TrendingMoviesSectionDelegate?
     
-    init(items: [ItemsType], delegate: TrendingMoviesSectionDelegate, sectionHeaderTitle: String) {
+    var sectionHeaderTitle: String
+    
+    weak var delegate: TrendingTVsSectionDelegate?
+    
+    init(items: [ItemsType], delegate: TrendingTVsSectionDelegate, sectionHeaderTitle: String) {
         self.items = items
         self.delegate = delegate
         self.sectionHeaderTitle = sectionHeaderTitle
@@ -39,7 +39,7 @@ class TrendingMoviesSection: SectionsLayout {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         // Group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(300))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(170))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let header = createHeader()
@@ -70,7 +70,7 @@ class TrendingMoviesSection: SectionsLayout {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell: TrendingMoviesCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
+        guard let cell: TrendingTVsCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
         cell.setup(movie: items[indexPath.row])
@@ -79,7 +79,7 @@ class TrendingMoviesSection: SectionsLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.item]
-        delegate?.trendingMoviesSection(self, didSelect: item)
+        delegate?.trendingTVsSection(self, didSelect: item)
     }
     
     func collectionView(
@@ -99,7 +99,7 @@ class TrendingMoviesSection: SectionsLayout {
     }
     
     func registerCell(in collectionView: UICollectionView) {
-        collectionView.registerNib(TrendingMoviesCollectionViewCell.self)
+        collectionView.registerNib(TrendingTVsCollectionViewCell.self)
     }
     
     func registerSupplementaryView(in collectionView: UICollectionView) {

@@ -58,6 +58,9 @@
 		D6724E632B938C9A00FC6AF7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */; };
 		D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */; };
 		D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */; };
+		D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E6B2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift */; };
+		D6724E6E2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E6C2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib */; };
+		D6724E702B93B27F00FC6AF7 /* TrendingTVsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E6F2B93B27F00FC6AF7 /* TrendingTVsSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,9 @@
 		D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		D6724E6B2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTVsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6724E6C2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingTVsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6724E6F2B93B27F00FC6AF7 /* TrendingTVsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTVsSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +373,7 @@
 		D6724E182B9282A500FC6AF7 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				D6724E6A2B93B1E700FC6AF7 /* TrendingTVsSection */,
 				D6724E1B2B9287C400FC6AF7 /* TrendingMoviesSection */,
 			);
 			path = Sections;
@@ -482,6 +489,16 @@
 				D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D6724E6A2B93B1E700FC6AF7 /* TrendingTVsSection */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E6F2B93B27F00FC6AF7 /* TrendingTVsSection.swift */,
+				D6724E6B2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift */,
+				D6724E6C2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib */,
+			);
+			path = TrendingTVsSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +620,7 @@
 				D6724E3F2B928DD700FC6AF7 /* HeaderCollectionReusableView.xib in Resources */,
 				D6724DBF2B926AD900FC6AF7 /* LaunchScreen.storyboard in Resources */,
 				D6724E212B92885200FC6AF7 /* TrendingMoviesCollectionViewCell.xib in Resources */,
+				D6724E6E2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.xib in Resources */,
 				D6724E572B93890600FC6AF7 /* Poppins-Bold.ttf in Resources */,
 				D6724E0E2B927CF200FC6AF7 /* Colors.xcassets in Resources */,
 				D6724DBC2B926AD900FC6AF7 /* Assets.xcassets in Resources */,
@@ -678,6 +696,7 @@
 				D6724E312B928BD400FC6AF7 /* DataEndPoint.swift in Sources */,
 				D6724E442B928F1E00FC6AF7 /* HomeViewModel.swift in Sources */,
 				D6724DF82B92777F00FC6AF7 /* TabBarType.swift in Sources */,
+				D6724E702B93B27F00FC6AF7 /* TrendingTVsSection.swift in Sources */,
 				D6724E0A2B9279DE00FC6AF7 /* +topMostViewController.swift in Sources */,
 				D6724E3E2B928DD700FC6AF7 /* HeaderCollectionReusableView.swift in Sources */,
 				D6724E202B92885200FC6AF7 /* TrendingMoviesCollectionViewCell.swift in Sources */,
@@ -696,6 +715,7 @@
 				D6724E342B928D1400FC6AF7 /* MoviesAPI.swift in Sources */,
 				D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */,
 				D6724E2A2B928AC100FC6AF7 /* HTTPRequestMethod.swift in Sources */,
+				D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */,
 				D6724E372B928DA300FC6AF7 /* UICollectionView+Ext.swift in Sources */,
 				D6724E4C2B9386E800FC6AF7 /* UIImageView+Ext.swift in Sources */,
 				D6724E5C2B938C5E00FC6AF7 /* Router.swift in Sources */,
