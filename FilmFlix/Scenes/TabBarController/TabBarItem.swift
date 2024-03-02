@@ -19,8 +19,8 @@ class FTabBarItem: UIView {
     // MARK: - Properties
     //
     private var widthConstraint: NSLayoutConstraint?
-    private let _height: CGFloat = 30
-    private let _width: CGFloat = 90
+    private let _height: CGFloat = 40
+    private let _width: CGFloat = 100
     private var _cornerRadius: CGFloat { _height / 2 }
     
     let item: UITabBarItem

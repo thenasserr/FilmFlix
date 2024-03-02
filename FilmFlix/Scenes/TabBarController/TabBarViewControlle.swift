@@ -10,7 +10,7 @@ import MakeConstraints
 import Combine
 
 class FTabBarViewController: UITabBarController {
-    let emTabBar = FilmFlix.FTabBar()
+    let fTabBar = FilmFlix.FTabBar()
     
     var cancellable = Set<AnyCancellable>()
     var tabBarConstraints: AnchoredConstraints?
@@ -29,38 +29,21 @@ class FTabBarViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.isHidden = true
         viewControllers = viewModel.viewControllers
-        setupEMTapBar()
+        setupFTapBar()
         
         viewModel.selectedTabPublisher.sink { [weak self] type in
             self?.selectedIndex = type.rawValue
-            self?.emTabBar.selectItem(at: type.rawValue)
+            self?.fTabBar.selectItem(at: type.rawValue)
         }
         .store(in: &cancellable)
-        
-        viewModel.tabBarIsHiddenPublisher
-            .sink { [self] hidden in
-                self.tabBarConstraints?.bottom?.constant = hidden ? 100 : 0
-                
-                UIView.animate(withDuration: 0.5) {
-                    self.view.layoutIfNeeded()
-                    
-                    if !hidden {
-                        self.emTabBar.isHidden = hidden
-                    }
-                } completion: { _ in
-                    self.emTabBar.isHidden = hidden
-                }
-                
-            }
-            .store(in: &cancellable)
     }
     
-    private func setupEMTapBar() {
-        emTabBar.delegate = self
-        view.addSubview(emTabBar)
-        emTabBar.fillXSuperView()
-        tabBarConstraints = emTabBar.makeConstraints(bottomAnchor: view.bottomAnchor)
-        emTabBar.setItems(FTabBarType.allCases.map { $0.tabBarItem })
+    private func setupFTapBar() {
+        fTabBar.delegate = self
+        view.addSubview(fTabBar)
+        fTabBar.fillXSuperView()
+        tabBarConstraints = fTabBar.makeConstraints(bottomAnchor: view.bottomAnchor)
+        fTabBar.setItems(FTabBarType.allCases.map { $0.tabBarItem })
     }
 }
 
