@@ -64,6 +64,8 @@
 		D6724E732B93DF0A00FC6AF7 /* TopRatedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E722B93DF0A00FC6AF7 /* TopRatedSection.swift */; };
 		D6724E782B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E762B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift */; };
 		D6724E792B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */; };
+		D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E7B2B93E9B800FC6AF7 /* DetailsViewController.swift */; };
+		D6724E7E2B93E9B800FC6AF7 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E7C2B93E9B800FC6AF7 /* DetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,8 @@
 		D6724E722B93DF0A00FC6AF7 /* TopRatedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedSection.swift; sourceTree = "<group>"; };
 		D6724E762B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRatedCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6724E7B2B93E9B800FC6AF7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D6724E7C2B93E9B800FC6AF7 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 			children = (
 				D6724DF52B92775C00FC6AF7 /* TabBarController */,
 				D6724E142B92825700FC6AF7 /* Home */,
+				D6724E7A2B93E9A000FC6AF7 /* Details */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -518,6 +523,15 @@
 			path = TopRatedSection;
 			sourceTree = "<group>";
 		};
+		D6724E7A2B93E9A000FC6AF7 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E7B2B93E9B800FC6AF7 /* DetailsViewController.swift */,
+				D6724E7C2B93E9B800FC6AF7 /* DetailsViewController.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -632,6 +646,7 @@
 			files = (
 				D6724DF22B926FF700FC6AF7 /* .swiftlint.yml in Resources */,
 				D6724DE82B926B4800FC6AF7 /* Localizable.strings in Resources */,
+				D6724E7E2B93E9B800FC6AF7 /* DetailsViewController.xib in Resources */,
 				D6724E562B93890600FC6AF7 /* Poppins-SemiBold.ttf in Resources */,
 				D6724E792B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib in Resources */,
 				D6724E582B93890600FC6AF7 /* Poppins-Medium.ttf in Resources */,
@@ -726,6 +741,7 @@
 				D6724E1A2B9282B500FC6AF7 /* HomeUseCase.swift in Sources */,
 				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
 				D6724E422B928EFD00FC6AF7 /* HomeViewController.swift in Sources */,
+				D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
 				D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */,
 				D6724E1D2B9287DC00FC6AF7 /* TrendingMoviesSection.swift in Sources */,
