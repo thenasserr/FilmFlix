@@ -13,10 +13,12 @@ class HomeViewModel {
     
     // MARK: - Properties
     private let useCase: HomeUseCase
+    private let coordinator: HomeCoordinatorProtocol
     
     // MARK: - Initialization
-    init(useCase: HomeUseCase) {
+    init(useCase: HomeUseCase, coordinator: HomeCoordinatorProtocol) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func getSections() async throws -> [any SectionsLayout] {

@@ -9,17 +9,13 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    var window: UIWindow?
+    var appCoordinator: AppCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        let factory = HomeFactory()
-        let useCase = HomeUseCase(factory: factory)
-        let viewModel = HomeViewModel(useCase: useCase)
-        let viewController = HomeViewController(viewModel: viewModel)
-        window.rootViewController = viewController
-        self.window = window
-        window.makeKeyAndVisible()
+        guard let windowScene = (scene as? UIWindowScene) else {
+            return
+        }
+        AppCoordinator.shared.makeWindow(from: windowScene)
+        AppCoordinator.shared.start()
     }
 }

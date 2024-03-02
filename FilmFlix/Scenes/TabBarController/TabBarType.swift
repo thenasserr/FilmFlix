@@ -9,34 +9,34 @@ import UIKit
 
 enum FTabBarType: Int, CaseIterable, Hashable {
     case home = 0
-    case cart
-    case notification
-    case profile
+    case upcoming
+    case top
+    case download
     
     private var title: String {
         switch self {
             case .home: "Home"
-            case .cart: "Coming Soon"
-            case .notification: "Top"
-            case .profile: "Download"
+            case .upcoming: "Coming Soon"
+            case .top: "Top"
+            case .download: "Download"
         }
     }
     
     private var icon: UIImage? {
         switch self {
             case .home: UIImage(systemName: "house")
-            case .cart: UIImage(systemName: "play.circle")
-            case .notification: UIImage(systemName: "magnifyingglass.circle")
-            case .profile: UIImage(systemName: "arrowtriangle.down.circle")
+            case .upcoming: UIImage(systemName: "play.circle")
+            case .top: UIImage(systemName: "magnifyingglass.circle")
+            case .download: UIImage(systemName: "arrowtriangle.down.circle")
         }
     }
     
     private var selectedIcon: UIImage? {
         switch self {
             case .home: UIImage(systemName: "house.fill")
-            case .cart: UIImage(systemName: "play.circle.fill")
-            case .notification: UIImage(systemName: "magnifyingglass.circle.fill")
-            case .profile: UIImage(systemName: "arrowtriangle.down.circle.fill")
+            case .upcoming: UIImage(systemName: "play.circle.fill")
+            case .top: UIImage(systemName: "magnifyingglass.circle.fill")
+            case .download: UIImage(systemName: "arrowtriangle.down.circle.fill")
         }
     }
     

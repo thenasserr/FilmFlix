@@ -55,7 +55,7 @@ class HomeViewController: UICollectionViewController {
             section.registerCell(in: self.collectionView)
             section.registerSupplementaryView(in: self.collectionView)
         }
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .black
         collectionView.collectionViewLayout = createCompositionalLayout()
         collectionView.reloadData()
     }

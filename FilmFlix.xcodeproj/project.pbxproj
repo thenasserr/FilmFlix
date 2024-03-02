@@ -52,6 +52,12 @@
 		D6724E572B93890600FC6AF7 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6724E522B93890600FC6AF7 /* Poppins-Bold.ttf */; };
 		D6724E582B93890600FC6AF7 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6724E532B93890600FC6AF7 /* Poppins-Medium.ttf */; };
 		D6724E592B93890600FC6AF7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E542B93890600FC6AF7 /* Fonts.swift */; };
+		D6724E5C2B938C5E00FC6AF7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E5B2B938C5E00FC6AF7 /* Router.swift */; };
+		D6724E5E2B938C6500FC6AF7 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E5D2B938C6500FC6AF7 /* AppRouter.swift */; };
+		D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E602B938C9000FC6AF7 /* Coordinator.swift */; };
+		D6724E632B938C9A00FC6AF7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */; };
+		D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */; };
+		D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +126,12 @@
 		D6724E522B93890600FC6AF7 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D6724E532B93890600FC6AF7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		D6724E542B93890600FC6AF7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		D6724E5B2B938C5E00FC6AF7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D6724E5D2B938C6500FC6AF7 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		D6724E602B938C9000FC6AF7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +266,8 @@
 		D6724E042B92798B00FC6AF7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D6724E5F2B938C8200FC6AF7 /* Coordinator */,
+				D6724E5A2B938C5500FC6AF7 /* Router */,
 				D6724E472B93868400FC6AF7 /* Constants */,
 				D6724E3A2B928DC800FC6AF7 /* CustomViews */,
 				D6724E0C2B927A1000FC6AF7 /* Extensions */,
@@ -450,6 +464,26 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D6724E5A2B938C5500FC6AF7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E5B2B938C5E00FC6AF7 /* Router.swift */,
+				D6724E5D2B938C6500FC6AF7 /* AppRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D6724E5F2B938C8200FC6AF7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E602B938C9000FC6AF7 /* Coordinator.swift */,
+				D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */,
+				D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */,
+				D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -637,7 +671,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6724E632B938C9A00FC6AF7 /* AppCoordinator.swift in Sources */,
 				D6724DFC2B9277DE00FC6AF7 /* TabBarViewControlle.swift in Sources */,
+				D6724E5E2B938C6500FC6AF7 /* AppRouter.swift in Sources */,
 				D6724E072B9279A800FC6AF7 /* MainWindow.swift in Sources */,
 				D6724E312B928BD400FC6AF7 /* DataEndPoint.swift in Sources */,
 				D6724E442B928F1E00FC6AF7 /* HomeViewModel.swift in Sources */,
@@ -647,18 +683,22 @@
 				D6724E202B92885200FC6AF7 /* TrendingMoviesCollectionViewCell.swift in Sources */,
 				D6724E002B92783F00FC6AF7 /* TabBarItem.swift in Sources */,
 				D6724E592B93890600FC6AF7 /* Fonts.swift in Sources */,
+				D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */,
 				D6724E132B92823700FC6AF7 /* SectionsLayout.swift in Sources */,
 				D6724E1A2B9282B500FC6AF7 /* HomeUseCase.swift in Sources */,
 				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
 				D6724E422B928EFD00FC6AF7 /* HomeViewController.swift in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
+				D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */,
 				D6724E1D2B9287DC00FC6AF7 /* TrendingMoviesSection.swift in Sources */,
 				D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */,
 				D6724E2C2B928AC100FC6AF7 /* ResponseWrapper.swift in Sources */,
 				D6724E342B928D1400FC6AF7 /* MoviesAPI.swift in Sources */,
+				D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */,
 				D6724E2A2B928AC100FC6AF7 /* HTTPRequestMethod.swift in Sources */,
 				D6724E372B928DA300FC6AF7 /* UICollectionView+Ext.swift in Sources */,
 				D6724E4C2B9386E800FC6AF7 /* UIImageView+Ext.swift in Sources */,
+				D6724E5C2B938C5E00FC6AF7 /* Router.swift in Sources */,
 				D6724E292B928AC100FC6AF7 /* EndPoint.swift in Sources */,
 				D6724E2B2B928AC100FC6AF7 /* BaseAPI.swift in Sources */,
 				D6724DFA2B9277B600FC6AF7 /* TabBarViewModel.swift in Sources */,
