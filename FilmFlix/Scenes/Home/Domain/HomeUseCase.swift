@@ -38,6 +38,12 @@ class HomeUseCase: HomeUseCaseProtocol {
             sections.append(layout)
         }
         
+        let populars = try await trendingMoviesAPIService.fetchPopulars()
+        if let populars = populars.results {
+            let layout = factory.createSection(type: .populars(populars), delegate: delegate, title: L10n.Home.Trending.populars)
+            sections.append(layout)
+        }
+        
         return sections
     }
 }

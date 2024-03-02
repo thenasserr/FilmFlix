@@ -10,6 +10,7 @@ import Foundation
 enum SectionsTypes {
     case trendingMovies([Movie])
     case trendingTVs([Movie])
+    case populars([Movie])
 }
 
 class HomeFactory {
@@ -20,6 +21,9 @@ class HomeFactory {
                 return TrendingMoviesSection(items: trending, delegate: delegate, sectionHeaderTitle: title)
             case .trendingTVs(let trending):
                 return TrendingTVsSection(items: trending, delegate: delegate, sectionHeaderTitle: title)
+            case .populars(let trending):
+                return TrendingMoviesSection(items: trending, delegate: delegate, sectionHeaderTitle: title)
+
         }
     }
     

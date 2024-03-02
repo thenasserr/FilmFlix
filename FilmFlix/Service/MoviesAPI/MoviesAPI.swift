@@ -10,6 +10,7 @@ import Foundation
 protocol MoviesAPI: BaseAPI {
     func fetchMovies() async throws -> TrendingTitleResponse
     func fetchTVs() async throws -> TrendingTitleResponse
+    func fetchPopulars() async throws -> TrendingTitleResponse
 }
 
 struct MoviesAPIService: MoviesAPI {
@@ -19,5 +20,9 @@ struct MoviesAPIService: MoviesAPI {
     
     func fetchTVs() async throws -> TrendingTitleResponse {
         try await fetch(endpoint: DataEndpoint.fetchTVs, type: TrendingTitleResponse.self)
+    }
+    
+    func fetchPopulars() async throws -> TrendingTitleResponse {
+        try await fetch(endpoint: DataEndpoint.fetchPobulars, type: TrendingTitleResponse.self)
     }
 }
