@@ -38,8 +38,8 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     // MARK: - Setup the Default UI
     private func setupUI() {
-        titleLabel.textColor = .black
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.textColor = .white
+        titleLabel.font = .h2
         
         if #available(iOS 15.0, *) {
             button.configuration = nil
