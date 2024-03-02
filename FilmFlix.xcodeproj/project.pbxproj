@@ -66,6 +66,7 @@
 		D6724E792B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */; };
 		D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E7B2B93E9B800FC6AF7 /* DetailsViewController.swift */; };
 		D6724E7E2B93E9B800FC6AF7 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6724E7C2B93E9B800FC6AF7 /* DetailsViewController.xib */; };
+		D6724E852B93F04800FC6AF7 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E842B93F04800FC6AF7 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		D6724E772B93DF7500FC6AF7 /* TopRatedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRatedCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6724E7B2B93E9B800FC6AF7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D6724E7C2B93E9B800FC6AF7 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		D6724E842B93F04800FC6AF7 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		D6724E0C2B927A1000FC6AF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6724E832B93F03B00FC6AF7 /* UIView */,
 				D6724E4A2B9386D500FC6AF7 /* UIImage */,
 				D6724E352B928D6B00FC6AF7 /* UICollectionView */,
 				D6724E112B92822800FC6AF7 /* SectionsLayout */,
@@ -532,6 +535,14 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		D6724E832B93F03B00FC6AF7 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D6724E842B93F04800FC6AF7 /* UIView+Ext.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -734,6 +745,7 @@
 				D6724E3E2B928DD700FC6AF7 /* HeaderCollectionReusableView.swift in Sources */,
 				D6724E202B92885200FC6AF7 /* TrendingMoviesCollectionViewCell.swift in Sources */,
 				D6724E002B92783F00FC6AF7 /* TabBarItem.swift in Sources */,
+				D6724E852B93F04800FC6AF7 /* UIView+Ext.swift in Sources */,
 				D6724E592B93890600FC6AF7 /* Fonts.swift in Sources */,
 				D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */,
 				D6724E132B92823700FC6AF7 /* SectionsLayout.swift in Sources */,
