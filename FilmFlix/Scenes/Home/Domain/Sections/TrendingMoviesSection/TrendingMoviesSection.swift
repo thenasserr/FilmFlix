@@ -8,13 +8,13 @@
 import UIKit
 
 protocol TrendingMoviesSectionDelegate: AnyObject {
-    func trendingMoviesSection(_ section: SpecialsSection, didSelect item: Dish)
+    func trendingMoviesSection(_ section: TrendingMoviesSection, didSelect item: Movie)
 }
 
 class TrendingMoviesSection: SectionsLayout {
-    typealias ItemsType = Dish
+    typealias ItemsType = Movie
     
-    var items: [Dish] = []
+    var items: [Movie] = []
         
     weak var delegate: TrendingMoviesSectionDelegate?
     
@@ -36,7 +36,7 @@ class TrendingMoviesSection: SectionsLayout {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         // Group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(100))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(300))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let header = createHeader()
@@ -67,10 +67,10 @@ class TrendingMoviesSection: SectionsLayout {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell: SpecialsCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
+        guard let cell: TrendingMoviesCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
-        cell.setup(dish: items[indexPath.row])
+        cell.setup(movie: items[indexPath.row])
         return cell
     }
     
@@ -91,12 +91,12 @@ class TrendingMoviesSection: SectionsLayout {
         ) as? HeaderCollectionReusableView else {
             return UICollectionReusableView()
         }
-        header.setupHeaderTitle(title: "Chef's Specials")
+        header.setupHeaderTitle(title: "Trending Movies")
         return header
     }
     
     func registerCell(in collectionView: UICollectionView) {
-        collectionView.registerNib(SpecialsCollectionViewCell.self)
+        collectionView.registerNib(TrendingMoviesCollectionViewCell.self)
     }
     
     func registerSupplementaryView(in collectionView: UICollectionView) {
