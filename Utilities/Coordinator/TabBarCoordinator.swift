@@ -8,6 +8,8 @@
 import UIKit
 
 protocol TabBarCoordinatorProtocol: Coordinator {
+    func showTabBar()
+    func hideTabBar()
     func showHome()
     func showCart()
     func showNotifications()
@@ -36,6 +38,14 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol, CartCoordinatorProtoco
         ]
         let viewControler = FTabBarViewController(viewModel: viewModel)
         router.push(viewControler)
+    }
+    
+    func showTabBar() {
+        self.viewModel.tabBarIsHidden = false
+    }
+    
+    func hideTabBar() {
+        viewModel.tabBarIsHidden = true
     }
     
     func showHome() {

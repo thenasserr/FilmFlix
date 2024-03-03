@@ -36,6 +36,23 @@ class FTabBarViewController: UITabBarController {
             self?.fTabBar.selectItem(at: type.rawValue)
         }
         .store(in: &cancellable)
+        
+        viewModel.tabBarIsHiddenPublisher
+                    .sink { [self] hidden in
+                        self.tabBarConstraints?.bottom?.constant = hidden ? 100 : 0
+
+                        UIView.animate(withDuration: 0.5) {
+                            self.view.layoutIfNeeded()
+
+                            if !hidden {
+                                self.fTabBar.isHidden = hidden
+                            }
+                        } completion: { _ in
+                            self.fTabBar.isHidden = hidden
+                        }
+
+                    }
+                    .store(in: &cancellable)
     }
     
     private func setupFTapBar() {

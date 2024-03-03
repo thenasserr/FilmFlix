@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeCoordinatorProtocol: Coordinator {
     func showHome()
-    func showDetails()
+    func showDetails(movie: Movie)
 }
 
 class HomeCoordinator: HomeCoordinatorProtocol {
@@ -32,7 +32,8 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         router.push(vcc)
     }
     
-    func showDetails() {
-       
+    func showDetails(movie: Movie) {
+        let viewController = DetailsViewController(movie: movie)
+        router.push(viewController)
     }
 }
