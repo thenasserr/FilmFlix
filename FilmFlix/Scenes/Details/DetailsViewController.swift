@@ -9,8 +9,10 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    // MARK: - Properties
     var movie: Movie
     
+    // MARK: - IBOutlets
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var mainContainerView: UIStackView!
@@ -22,6 +24,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var mediaType: UILabel!
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var detailsTitle: UILabel!
+    
     // MARK: - Initialization
     init(movie: Movie) {
         self.movie = movie
@@ -32,12 +35,14 @@ class DetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         showDishDetails()
     }
     
+    // MARK: - Private Methods
     private func showDishDetails() {
         let imageURL = (Constants.imageBase + movie.poster_path)
         posterImage.load(urlString: imageURL)

@@ -9,10 +9,12 @@ import UIKit
 
 class TrendingTVsCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var containerView: UIStackView!
     @IBOutlet weak var tvOverview: UILabel!
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var tvImage: UIImageView!
+    
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()

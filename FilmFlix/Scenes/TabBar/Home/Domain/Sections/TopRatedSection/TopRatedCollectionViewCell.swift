@@ -9,15 +9,18 @@ import UIKit
 
 class TopRatedCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var containerView: UIStackView!
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
     
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
+    
     // MARK: - Setup Method
     func setup(movie: Movie) {
         let imageURL = (Constants.imageBase + movie.poster_path)
