@@ -25,6 +25,9 @@ class UpcomingViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Upcoming"
+        let titleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+        navigationController?.navigationBar.tintColor = .white
         getSections()
     }
     

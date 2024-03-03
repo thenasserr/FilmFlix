@@ -16,11 +16,8 @@ protocol TabBarCoordinatorProtocol: Coordinator {
     func showProfile()
 }
 
-protocol UpcomingCoordinatorProtocol: Coordinator {
-    func showUpcoming()
-}
 
-final class TabBarCoordinator: TabBarCoordinatorProtocol, UpcomingCoordinatorProtocol {
+final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     let viewModel: FTabBarViewModelInterface = FTabBarViewModel.shared
     let router: Router
@@ -73,11 +70,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol, UpcomingCoordinatorPro
     }
     
     private func upcomingViewController() -> UIViewController {
-        let factory = UpcomingFactory()
-        let useCase = UpcomingUseCase(factory: factory)
-        let viewModel = UpcomingViewModel(useCase: useCase)
-        let viewController = UpcomingViewController(viewModel: viewModel)
-        return viewController
+        let navigationController = UINavigationController()
+        let router = AppRouter(navigationController: navigationController)
+        let coordinator = UpcomingCoordinator(router: router)
+        coordinator.start()
+        return navigationController
     }
     
     private func notificationViewController() -> UIViewController {

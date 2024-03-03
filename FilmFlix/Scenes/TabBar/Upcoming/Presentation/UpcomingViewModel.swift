@@ -10,9 +10,11 @@ import Foundation
 class UpcomingViewModel {
     // MARK: - Properties
     let useCase: UpcomingUseCase
-    
-    init(useCase: UpcomingUseCase) {
+    private let coordinator: UpcomingCoordinatorProtocol
+
+    init(useCase: UpcomingUseCase, coordinator: UpcomingCoordinatorProtocol) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func getSections() async throws -> [any SectionsLayout] {
@@ -23,5 +25,6 @@ class UpcomingViewModel {
 extension UpcomingViewModel: UpcomingSectionDelegate {
     func upcomingSection(_ section: UpcomingSection, didSelect item: Movie) {
         print(item)
+        coordinator.showDetails(movie: item)
     }
 }

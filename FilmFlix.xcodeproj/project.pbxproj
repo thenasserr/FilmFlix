@@ -74,6 +74,7 @@
 		D6724E952B940B1300FC6AF7 /* UpcomingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E942B940B1300FC6AF7 /* UpcomingFactory.swift */; };
 		D6724E972B940C1600FC6AF7 /* UpcomingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E962B940C1600FC6AF7 /* UpcomingUseCase.swift */; };
 		D6724E992B940DF900FC6AF7 /* UpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E982B940DF900FC6AF7 /* UpcomingViewModel.swift */; };
+		D6724E9B2B94121C00FC6AF7 /* UpcomingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6724E9A2B94121C00FC6AF7 /* UpcomingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		D6724E942B940B1300FC6AF7 /* UpcomingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingFactory.swift; sourceTree = "<group>"; };
 		D6724E962B940C1600FC6AF7 /* UpcomingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingUseCase.swift; sourceTree = "<group>"; };
 		D6724E982B940DF900FC6AF7 /* UpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewModel.swift; sourceTree = "<group>"; };
+		D6724E9A2B94121C00FC6AF7 /* UpcomingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +517,7 @@
 				D6724E622B938C9A00FC6AF7 /* AppCoordinator.swift */,
 				D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */,
 				D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */,
+				D6724E9A2B94121C00FC6AF7 /* UpcomingCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */,
 				D6724E1D2B9287DC00FC6AF7 /* TrendingMoviesSection.swift in Sources */,
 				D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */,
+				D6724E9B2B94121C00FC6AF7 /* UpcomingCoordinator.swift in Sources */,
 				D6724E2C2B928AC100FC6AF7 /* ResponseWrapper.swift in Sources */,
 				D6724E342B928D1400FC6AF7 /* MoviesAPI.swift in Sources */,
 				D6724E952B940B1300FC6AF7 /* UpcomingFactory.swift in Sources */,
