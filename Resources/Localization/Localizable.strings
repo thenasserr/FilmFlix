@@ -10,3 +10,6 @@
 "home.trending.tvs" = "Trending TVs";
 "home.trending.populars" = "Populars";
 "home.trending.topRated" = "Top Rated";
+//
+"details.title" = "Details";
+"details.review.title" = "Review";

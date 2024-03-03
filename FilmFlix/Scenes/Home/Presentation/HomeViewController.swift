@@ -26,9 +26,10 @@ class HomeViewController: UICollectionViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = L10n.home
         let titleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = titleAttributes        
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+        navigationController?.navigationBar.tintColor = .white
         getSections()
     }
     

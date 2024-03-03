@@ -30,13 +30,14 @@ class HomeViewModel {
 extension HomeViewModel: HomeSectionsDelegate {
     func topRatedSection(_ section: TopRatedSection, didSelect item: Movie) {
         print(item)
+        coordinator.showDetails(movie: item)
     }
     
     func trendingTVsSection(_ section: TrendingTVsSection, didSelect item: Movie) {
-        print(item)
+        coordinator.showDetails(movie: item)
     }
     
     func trendingMoviesSection(_ section: TrendingMoviesSection, didSelect item: Movie) {
-        print(item)
+        coordinator.showDetails(movie: item)
     }
 }

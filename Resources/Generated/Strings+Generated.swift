@@ -15,6 +15,14 @@ internal enum L10n {
   /// 
   ///   Created by Ibrahim Nasser Ibrahim on 01/03/2024.
   internal static let home = L10n.tr("Localizable", "home", fallback: "Home")
+  internal enum Details {
+    /// Details
+    internal static let title = L10n.tr("Localizable", "details.title", fallback: "Details")
+    internal enum Review {
+      /// Review
+      internal static let title = L10n.tr("Localizable", "details.review.title", fallback: "Review")
+    }
+  }
   internal enum Home {
     internal enum Trending {
       /// Trending Movies
