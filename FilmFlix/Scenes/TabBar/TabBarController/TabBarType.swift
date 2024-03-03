@@ -16,7 +16,7 @@ enum FTabBarType: Int, CaseIterable, Hashable {
     private var title: String {
         switch self {
             case .home: "Home"
-            case .upcoming: "Coming Soon"
+            case .upcoming: "Upcoming"
             case .top: "Top"
             case .download: "Download"
         }

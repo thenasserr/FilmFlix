@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UpcomingCollectionViewCell" customModule="FilmFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="204"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="204"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="u17-Xi-wxw">
+                        <rect key="frame" x="5" y="5" width="309" height="194"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWl-Vj-6XC">
+                                <rect key="frame" x="0.0" y="22" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gf3-Jy-wgx"/>
+                                    <constraint firstAttribute="height" constant="150" id="hGW-EL-wXI"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="SkS-7M-JRd">
+                                <rect key="frame" x="106" y="78" width="203" height="38.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yQ-Aw-itA">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="38.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-1q-GQN">
+                                        <rect key="frame" x="128" y="0.0" width="75" height="38.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Ou5-x9-gBm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="u17-Xi-wxw" secondAttribute="trailing" constant="5" id="9xp-MM-dfQ"/>
+                <constraint firstItem="u17-Xi-wxw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Ksq-Fd-8u9"/>
+                <constraint firstAttribute="bottom" secondItem="u17-Xi-wxw" secondAttribute="bottom" constant="5" id="Sb8-gW-tTj"/>
+                <constraint firstItem="u17-Xi-wxw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="qQj-Ij-8ad"/>
+            </constraints>
+            <size key="customSize" width="319" height="204"/>
+            <connections>
+                <outlet property="containerStackView" destination="u17-Xi-wxw" id="NGe-Uu-tft"/>
+                <outlet property="movieImage" destination="OWl-Vj-6XC" id="yT9-E6-Y15"/>
+                <outlet property="movieTitle" destination="5yQ-Aw-itA" id="xVA-cX-EAE"/>
+                <outlet property="playButton" destination="9xP-1q-GQN" id="jzT-G0-E1n"/>
+            </connections>
+            <point key="canvasLocation" x="45.038167938931295" y="73.239436619718319"/>
+        </collectionViewCell>
+    </objects>
+</document>

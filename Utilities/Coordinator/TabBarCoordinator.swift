@@ -11,16 +11,16 @@ protocol TabBarCoordinatorProtocol: Coordinator {
     func showTabBar()
     func hideTabBar()
     func showHome()
-    func showCart()
+    func showUpcoming()
     func showNotifications()
     func showProfile()
 }
 
-protocol CartCoordinatorProtocol: Coordinator {
-    func showCart()
+protocol UpcomingCoordinatorProtocol: Coordinator {
+    func showUpcoming()
 }
 
-final class TabBarCoordinator: TabBarCoordinatorProtocol, CartCoordinatorProtocol {
+final class TabBarCoordinator: TabBarCoordinatorProtocol, UpcomingCoordinatorProtocol {
     
     let viewModel: FTabBarViewModelInterface = FTabBarViewModel.shared
     let router: Router
@@ -32,7 +32,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol, CartCoordinatorProtoco
         router.navigationController.navigationBar.isHidden = true
         viewModel.viewControllers = [
             homeViewController(),
-            cartViewController(),
+            upcomingViewController(),
             notificationViewController(),
             profileViewController()
         ]
@@ -52,8 +52,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol, CartCoordinatorProtoco
         viewModel.selectedTab = .home
     }
     
-    func showCart() {
-        
+    func showUpcoming() {
+        viewModel.selectedTab = .upcoming
     }
     
     func showNotifications() {
@@ -72,8 +72,12 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol, CartCoordinatorProtoco
         return navigationController
     }
     
-    private func cartViewController() -> UIViewController {
-        return UIViewController()
+    private func upcomingViewController() -> UIViewController {
+        let factory = UpcomingFactory()
+        let useCase = UpcomingUseCase(factory: factory)
+        let viewModel = UpcomingViewModel(useCase: useCase)
+        let viewController = UpcomingViewController(viewModel: viewModel)
+        return viewController
     }
     
     private func notificationViewController() -> UIViewController {
