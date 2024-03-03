@@ -43,7 +43,7 @@ class DetailsViewController: UIViewController {
         posterImage.load(urlString: imageURL)
         detailsTitle.text = L10n.Details.title
         movieName.text = movie.original_name ?? movie.original_title
-        mediaType.text = movie.media_type
+        mediaType.text = movie.media_type ?? "movie"
         releasedDate.text = movie.release_date
         popularityLabel.text = String(movie.vote_average)
         overviewLabel.text = movie.overview

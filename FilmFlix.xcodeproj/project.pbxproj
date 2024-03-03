@@ -263,8 +263,7 @@
 		D6724DF42B92775500FC6AF7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D6724DF52B92775C00FC6AF7 /* TabBarController */,
-				D6724E142B92825700FC6AF7 /* Home */,
+				D6724E862B94035700FC6AF7 /* TabBar */,
 				D6724E7A2B93E9A000FC6AF7 /* Details */,
 			);
 			path = Scenes;
@@ -541,6 +540,15 @@
 				D6724E842B93F04800FC6AF7 /* UIView+Ext.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		D6724E862B94035700FC6AF7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D6724DF52B92775C00FC6AF7 /* TabBarController */,
+				D6724E142B92825700FC6AF7 /* Home */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
