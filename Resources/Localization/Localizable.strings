@@ -13,6 +13,7 @@
 //
 "details.title" = "Details";
 "details.review.title" = "Review";
+"details.watchTrailer.title" = "Watch Trailer";
 //
 "play.download.title" = "Download";
 "play.watchLater.title" = "Watch Later";

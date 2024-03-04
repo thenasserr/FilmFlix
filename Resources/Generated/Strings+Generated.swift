@@ -22,6 +22,10 @@ internal enum L10n {
       /// Review
       internal static let title = L10n.tr("Localizable", "details.review.title", fallback: "Review")
     }
+    internal enum WatchTrailer {
+      /// Watch Trailer
+      internal static let title = L10n.tr("Localizable", "details.watchTrailer.title", fallback: "Watch Trailer")
+    }
   }
   internal enum Home {
     internal enum Trending {

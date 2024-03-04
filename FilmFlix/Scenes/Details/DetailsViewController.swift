@@ -24,6 +24,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var mediaType: UILabel!
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var detailsTitle: UILabel!
+    @IBOutlet weak var downloadButton: FilmButton!
+    @IBOutlet weak var watchTrailerButton: FilmButton!
     
     // MARK: - Initialization
     init(movie: Movie) {
@@ -60,10 +62,12 @@ class DetailsViewController: UIViewController {
         configureDetailsStackView()
         configureLabelsUI()
         configureMiddleView()
+        configureDownLoadButtonUI()
+        configureWatchTrailerButtonUI()
     }
     
     private func configureDetailsStackView() {
-        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 10, right: 10)
+        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 20, right: 10)
         detailsContainerView.isLayoutMarginsRelativeArrangement = true
         detailsContainerView.detailsCustomShape()
         detailsContainerView.backgroundColor = .white
@@ -78,6 +82,16 @@ class DetailsViewController: UIViewController {
         reviewLabel.text = L10n.Details.Review.title
         reviewLabel.font = .h3
         reviewLabel.textColor = .black
+    }
+    
+    private func configureDownLoadButtonUI() {
+        downloadButton.title = L10n.Play.Download.title
+        downloadButton.buttonBackgroundColor = .fDownload
+    }
+    
+    private func configureWatchTrailerButtonUI() {
+        watchTrailerButton.title = L10n.Details.WatchTrailer.title
+        watchTrailerButton.buttonBackgroundColor = .fWatchLater
     }
     
     private func configureLabelsUI() {
@@ -98,5 +112,14 @@ class DetailsViewController: UIViewController {
         
         overviewLabel.font = .regular
         overviewLabel.textColor = .gray
+    }
+    
+    // MARK: - Buttons Action
+    @IBAction func downloadButtonTapped(_ sender: Any) {
+        print("Added to download")
+    }
+    
+    @IBAction func watchTrailerButtonTapped(_ sender: Any) {
+        print("Go to trailer viewController")
     }
 }
