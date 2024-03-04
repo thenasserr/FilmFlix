@@ -33,8 +33,7 @@ class UpcomingCoordinator: UpcomingCoordinatorProtocol {
     }
     
     func showTrailer(movie: Movie) {
-        let factory = UpcomingFactory()
-        let useCase = UpcomingUseCase(factory: factory)
+        let useCase = TrailerUseCase()
         let viewModel = TrailerViewModel(useCase: useCase)
         let viewController = TrailerViewController(movie: movie, viewModel: viewModel)
         router.push(viewController)
