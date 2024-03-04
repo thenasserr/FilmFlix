@@ -11,6 +11,7 @@ class DetailsViewController: UIViewController {
     
     // MARK: - Properties
     var movie: Movie
+    let viewModel: DetailsViewModel
     
     // MARK: - IBOutlets
     @IBOutlet weak var reviewLabel: UILabel!
@@ -28,8 +29,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var watchTrailerButton: FilmButton!
     
     // MARK: - Initialization
-    init(movie: Movie) {
+    init(movie: Movie, viewModel: DetailsViewModel) {
         self.movie = movie
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -57,7 +59,7 @@ class DetailsViewController: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = .fMainBackground
         posterImage.posterCustomShape()
         configureDetailsStackView()
         configureLabelsUI()
@@ -67,16 +69,16 @@ class DetailsViewController: UIViewController {
     }
     
     private func configureDetailsStackView() {
-        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 20, right: 10)
+        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 10, right: 10)
         detailsContainerView.isLayoutMarginsRelativeArrangement = true
+//        detailsContainerView.backgroundColor = .white
         detailsContainerView.detailsCustomShape()
-        detailsContainerView.backgroundColor = .white
     }
     
     private func configureMiddleView() {
         middleView.layer.cornerRadius = 15
         middleView.layer.borderWidth = 2
-        middleView.layer.borderColor = UIColor.black.cgColor
+        middleView.layer.borderColor = UIColor.gray.cgColor
         middleView.backgroundColor = .white
         
         reviewLabel.text = L10n.Details.Review.title
@@ -120,6 +122,6 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func watchTrailerButtonTapped(_ sender: Any) {
-        print("Go to trailer viewController")
+        viewModel.goToTrailer(movie: movie)
     }
 }

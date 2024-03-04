@@ -10,18 +10,30 @@ import Foundation
 protocol UpcomingCoordinatorProtocol: Coordinator {
     func showUpcoming()
     func showTrailer(movie: Movie)
+    func showTabBar()
+    func hideTabBar()
 }
 
 class UpcomingCoordinator: UpcomingCoordinatorProtocol {
     
     var router: Router
+    var tabBarCoordinator: TabBarCoordinator
     
-    init(router: Router) {
+    init(router: Router, tabBarCoordinator: TabBarCoordinator) {
         self.router = router
+        self.tabBarCoordinator = tabBarCoordinator
     }
     
     func start() {
         showUpcoming()
+    }
+    
+    func showTabBar() {
+        tabBarCoordinator.showTabBar()
+    }
+    
+    func hideTabBar() {
+        tabBarCoordinator.hideTabBar()
     }
     
     func showUpcoming() {

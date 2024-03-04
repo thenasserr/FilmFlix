@@ -5,23 +5,35 @@
 //  Created by Ibrahim Nasser Ibrahim on 02/03/2024.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeCoordinatorProtocol: Coordinator {
     func showHome()
     func showDetails(movie: Movie)
+    func showTabBar()
+    func hideTabBar()
 }
 
 class HomeCoordinator: HomeCoordinatorProtocol {
     
     var router: Router
+    var tabBarCoordinator: TabBarCoordinator
     
-    init(router: Router) {
+    init(router: Router, tabBarCoordinator: TabBarCoordinator) {
         self.router = router
+        self.tabBarCoordinator = tabBarCoordinator
     }
     
     func start() {
         showHome()
+    }
+    
+    func showTabBar() {
+        tabBarCoordinator.showTabBar()
+    }
+    
+    func hideTabBar() {
+        tabBarCoordinator.hideTabBar()
     }
     
     func showHome() {
@@ -33,7 +45,7 @@ class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func showDetails(movie: Movie) {
-        let viewController = DetailsViewController(movie: movie)
-        router.push(viewController)
+        let coordinator = DetailsCoordinator(router: router)
+        coordinator.showDetails(movie: movie)
     }
 }

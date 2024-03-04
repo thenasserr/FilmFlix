@@ -63,7 +63,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     private func homeViewController() -> UIViewController {
         let navigationController = UINavigationController()
         let router = AppRouter(navigationController: navigationController)
-        let coordinator = HomeCoordinator(router: router)
+        let coordinator = HomeCoordinator(router: router, tabBarCoordinator: self)
         coordinator.start()
         return navigationController
     }
@@ -71,7 +71,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     private func upcomingViewController() -> UIViewController {
         let navigationController = UINavigationController()
         let router = AppRouter(navigationController: navigationController)
-        let coordinator = UpcomingCoordinator(router: router)
+        let coordinator = UpcomingCoordinator(router: router, tabBarCoordinator: self)
         coordinator.start()
         return navigationController
     }

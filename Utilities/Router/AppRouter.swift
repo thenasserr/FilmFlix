@@ -12,6 +12,8 @@ public final class AppRouter: Router {
     
     public required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.navigationBar.titleTextAttributes = [.font: UIFont.h2]
+
     }
     
     public func present(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
@@ -48,7 +50,6 @@ public final class AppRouter: Router {
     
     public func push(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
-//        navigationController.navigationBar.isHidden = false
         navigationController.pushViewController(viewController, animated: animated)
         completion()
     }
