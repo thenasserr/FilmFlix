@@ -9,7 +9,6 @@ import Foundation
 
 protocol UpcomingUseCaseProtocol {
     func getSectionsLayout(delegate: UpcomingSectionDelegate) async throws -> [any SectionsLayout]
-    func getMovies(with title: String) async throws -> VideoElement
 }
 
 class UpcomingUseCase: UpcomingUseCaseProtocol {
@@ -17,6 +16,7 @@ class UpcomingUseCase: UpcomingUseCaseProtocol {
     private let trendingMoviesAPIService: MoviesAPI
     private let factory: UpcomingFactory
     
+    // MARK: - Initialization
     init(trendingMoviesAPIService: MoviesAPI = MoviesAPIService(), factory: UpcomingFactory) {
         self.trendingMoviesAPIService = trendingMoviesAPIService
         self.factory = factory
@@ -31,9 +31,5 @@ class UpcomingUseCase: UpcomingUseCaseProtocol {
             sections.append(layout)
         }
         return sections
-    }
-    
-    func getMovies(with title: String) async throws -> VideoElement {
-        try await trendingMoviesAPIService.getMovies(with: title)
     }
 }

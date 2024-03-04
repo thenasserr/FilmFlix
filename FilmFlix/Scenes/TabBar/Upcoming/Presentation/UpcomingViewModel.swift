@@ -25,7 +25,6 @@ class UpcomingViewModel {
 
 extension UpcomingViewModel: UpcomingSectionDelegate {
     func upcomingSection(_ section: UpcomingSection, didSelect item: Movie) {
-        print(item)
         coordinator.showTrailer(movie: item)
     }
 }

@@ -10,10 +10,10 @@ import Foundation
 class TrailerViewModel {
     
     // MARK: - Properties
-    let useCase: UpcomingUseCase
+    let useCase: TrailerUseCase
     
     // MARK: - Initialization
-    init(useCase: UpcomingUseCase) {
+    init(useCase: TrailerUseCase) {
         self.useCase = useCase
     }
     
