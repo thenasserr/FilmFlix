@@ -96,6 +96,7 @@ class TrailerViewController: UIViewController {
     @IBAction func watchLaterButtonTapped(_ sender: Any) {
         print("Added To Watch Later..")
     }
+    
     @IBAction func downloadButtonTapped(_ sender: Any) {
         print("Added To Downloads..")
     }

@@ -77,6 +77,9 @@
                                                     <rect key="frame" x="183.66666666666663" y="0.0" width="179.33333333333337" height="38.333333333333336"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="downloadButtonTapped:" destination="-1" eventType="touchUpInside" id="eM2-Ja-T3i"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
