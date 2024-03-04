@@ -17,8 +17,8 @@ class UpcomingSection: SectionsLayout {
     var items: [Movie] = []
     
     var sectionHeaderTitle: String
-
-   weak var delegate: UpcomingSectionDelegate?
+    
+    weak var delegate: UpcomingSectionDelegate?
     init(items: [ItemsType], delegate: UpcomingSectionDelegate, sectionHeaderTitle: String) {
         self.items = items
         self.delegate = delegate
@@ -48,7 +48,7 @@ class UpcomingSection: SectionsLayout {
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [header]
         section.contentInsets = .init(top: 0, leading: 10, bottom: 20, trailing: 10)
-
+        
         return section
     }
     
@@ -79,6 +79,20 @@ class UpcomingSection: SectionsLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         delegate?.upcomingSection(self, didSelect: item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        contextMenuConfigurationForItemAt indexPath: IndexPath,
+                        point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) {[weak self] _ in
+                let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                    print("Downloaded")
+                }
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
+            }
+        return config
     }
     
     func collectionView(

@@ -15,9 +15,9 @@ class TrendingMoviesSection: SectionsLayout {
     typealias ItemsType = Movie
     
     var items: [Movie] = []
-        
+    
     var sectionHeaderTitle: String
-
+    
     weak var delegate: TrendingMoviesSectionDelegate?
     
     init(items: [ItemsType], delegate: TrendingMoviesSectionDelegate, sectionHeaderTitle: String) {
@@ -43,7 +43,7 @@ class TrendingMoviesSection: SectionsLayout {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let header = createHeader()
-
+        
         // Section
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 15
@@ -80,6 +80,20 @@ class TrendingMoviesSection: SectionsLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.item]
         delegate?.trendingMoviesSection(self, didSelect: item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        contextMenuConfigurationForItemAt indexPath: IndexPath,
+                        point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) {[weak self] _ in
+                let downloadAction = UIAction(title: "Download", subtitle: nil, image: UIImage(systemName: "square.and.arrow.down"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                    print("Downloaded")
+                }
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
+            }
+        return config
     }
     
     func collectionView(

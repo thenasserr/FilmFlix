@@ -94,4 +94,8 @@ class HomeViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         sections[indexPath.section].collectionView(collectionView, didSelectItemAt: indexPath)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        sections[indexPath.section].collectionView(collectionView, contextMenuConfigurationForItemAt: indexPath, point: point)
+    }
 }

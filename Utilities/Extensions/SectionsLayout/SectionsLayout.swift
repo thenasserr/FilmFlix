@@ -34,4 +34,8 @@ protocol SectionsLayout {
     func registerSupplementaryView(in collectionView: UICollectionView)
     
     func registerDecorationView(layout: UICollectionViewLayout)
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        contextMenuConfigurationForItemAt indexPath: IndexPath,
+                        point: CGPoint) -> UIContextMenuConfiguration?
 }

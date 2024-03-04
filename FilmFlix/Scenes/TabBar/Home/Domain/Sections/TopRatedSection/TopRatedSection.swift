@@ -17,8 +17,8 @@ class TopRatedSection: SectionsLayout {
     var items: [Movie] = []
     
     var sectionHeaderTitle: String
-
-   weak var delegate: TopRatedSectionDelegate?
+    
+    weak var delegate: TopRatedSectionDelegate?
     init(items: [ItemsType], delegate: TopRatedSectionDelegate, sectionHeaderTitle: String) {
         self.items = items
         self.delegate = delegate
@@ -54,7 +54,7 @@ class TopRatedSection: SectionsLayout {
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [header]
         section.contentInsets = .init(top: 0, leading: 20, bottom: 20, trailing: 20)
-
+        
         return section
     }
     
@@ -85,6 +85,25 @@ class TopRatedSection: SectionsLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         delegate?.topRatedSection(self, didSelect: item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        contextMenuConfigurationForItemAt indexPath: IndexPath,
+                        point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) {[weak self] _ in
+                let downloadAction = UIAction(title: "Download",
+                                              subtitle: nil,
+                                              image: UIImage(systemName: "square.and.arrow.down"),
+                                              identifier: nil,
+                                              discoverabilityTitle: nil, state: .off) { _ in
+                    print("Downloaded")
+                }
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
+            }
+        
+        return config
     }
     
     func collectionView(
