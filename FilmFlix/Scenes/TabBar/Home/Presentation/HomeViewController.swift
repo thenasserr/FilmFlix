@@ -61,6 +61,7 @@ class HomeViewController: UICollectionViewController {
             section.registerSupplementaryView(in: self.collectionView)
         }
         collectionView.backgroundColor = .fMainBackground
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.collectionViewLayout = createCompositionalLayout()
         collectionView.reloadData()
     }

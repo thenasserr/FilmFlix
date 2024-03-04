@@ -24,7 +24,9 @@ class DetailsCoordinator: DetailsCoordinatorProtocol {
     }
     
     func showDetails(movie: Movie) {
-        let viewModel = DetailsViewModel(coordinator: self)
+        let coreManage = CoreManager()
+        let useCase = DetailsUseCase(coreManager: coreManage)
+        let viewModel = DetailsViewModel(coordinator: self, useCase: useCase)
         let viewController = DetailsViewController(movie: movie, viewModel: viewModel)
         router.push(viewController)
     }

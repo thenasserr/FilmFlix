@@ -13,7 +13,7 @@ protocol TabBarCoordinatorProtocol: Coordinator {
     func showHome()
     func showUpcoming()
     func showNotifications()
-    func showProfile()
+    func showDownload()
 }
 
 final class TabBarCoordinator: TabBarCoordinatorProtocol {
@@ -30,7 +30,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
             homeViewController(),
             upcomingViewController(),
             notificationViewController(),
-            profileViewController()
+            downloadViewController()
         ]
         let viewControler = FTabBarViewController(viewModel: viewModel)
         router.push(viewControler)
@@ -56,8 +56,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         
     }
     
-    func showProfile() {
-        
+    func showDownload() {
+        viewModel.selectedTab = .download
     }
     
     private func homeViewController() -> UIViewController {
@@ -80,7 +80,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         return UIViewController()
     }
     
-    private func profileViewController() -> UIViewController {
-        return UIViewController()
+    private func downloadViewController() -> UIViewController {
+        let coreManage = CoreManager()
+        let useCase = DownloadUseCase(coreManager: coreManage)
+        let viewModel = DownloadViewModel(useCase: useCase)
+        let viewController = DownloadViewController(viewModel: viewModel)
+        return viewController
     }
 }

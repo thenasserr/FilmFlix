@@ -83,6 +83,14 @@
 		D6CBB32E2B9624D800F0A3B6 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB32D2B9624D800F0A3B6 /* DetailsCoordinator.swift */; };
 		D6CBB3312B962A4F00F0A3B6 /* TrailerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3302B962A4F00F0A3B6 /* TrailerUseCase.swift */; };
 		D6CBB3742B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3722B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld */; };
+		D6CBB3772B96784900F0A3B6 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3762B96784900F0A3B6 /* CoreManager.swift */; };
+		D6CBB37A2B967C5800F0A3B6 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3792B967C5800F0A3B6 /* DownloadViewController.swift */; };
+		D6CBB3802B967CD400F0A3B6 /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB37E2B967CD400F0A3B6 /* DownloadTableViewCell.swift */; };
+		D6CBB3812B967CD400F0A3B6 /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CBB37F2B967CD400F0A3B6 /* DownloadTableViewCell.xib */; };
+		D6CBB3842B967E3600F0A3B6 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3832B967E3500F0A3B6 /* UITableView+Ext.swift */; };
+		D6CBB3872B96869B00F0A3B6 /* DetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3862B96869B00F0A3B6 /* DetailsUseCase.swift */; };
+		D6CBB3892B9688CB00F0A3B6 /* DownloadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */; };
+		D6CBB38D2B96897C00F0A3B6 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +190,14 @@
 		D6CBB32D2B9624D800F0A3B6 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 		D6CBB3302B962A4F00F0A3B6 /* TrailerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerUseCase.swift; sourceTree = "<group>"; };
 		D6CBB3732B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmFlixModel.xcdatamodel; sourceTree = "<group>"; };
+		D6CBB3762B96784900F0A3B6 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
+		D6CBB3792B967C5800F0A3B6 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		D6CBB37E2B967CD400F0A3B6 /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
+		D6CBB37F2B967CD400F0A3B6 /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
+		D6CBB3832B967E3500F0A3B6 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		D6CBB3862B96869B00F0A3B6 /* DetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCase.swift; sourceTree = "<group>"; };
+		D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUseCase.swift; sourceTree = "<group>"; };
+		D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +253,7 @@
 		D6724DB12B926AD700FC6AF7 /* FilmFlix */ = {
 			isa = PBXGroup;
 			children = (
+				D6CBB3752B96783000F0A3B6 /* CoreData */,
 				D6724E242B928AB600FC6AF7 /* Network */,
 				D6724DF42B92775500FC6AF7 /* Scenes */,
 				D6724DB22B926AD700FC6AF7 /* AppDelegate.swift */,
@@ -345,6 +362,7 @@
 		D6724E0C2B927A1000FC6AF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6CBB3822B967E2800F0A3B6 /* UITableView */,
 				D6724E832B93F03B00FC6AF7 /* UIView */,
 				D6724E4A2B9386D500FC6AF7 /* UIImage */,
 				D6724E352B928D6B00FC6AF7 /* UICollectionView */,
@@ -565,6 +583,7 @@
 		D6724E7A2B93E9A000FC6AF7 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				D6CBB3852B96868400F0A3B6 /* Domain */,
 				D6CBB32A2B96225E00F0A3B6 /* Presentation */,
 			);
 			path = Details;
@@ -584,6 +603,7 @@
 				D6724DF52B92775C00FC6AF7 /* TabBarController */,
 				D6724E142B92825700FC6AF7 /* Home */,
 				D6724E872B94080700FC6AF7 /* Upcoming */,
+				D6CBB3782B967C0E00F0A3B6 /* Download */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -685,6 +705,66 @@
 				D6724E9E2B9416C200FC6AF7 /* TrailerViewController.xib */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D6CBB3752B96783000F0A3B6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3762B96784900F0A3B6 /* CoreManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D6CBB3782B967C0E00F0A3B6 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB37C2B967CB600F0A3B6 /* Domain */,
+				D6CBB38B2B96896500F0A3B6 /* Presentaion */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		D6CBB37C2B967CB600F0A3B6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB37D2B967CBC00F0A3B6 /* Cell */,
+				D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D6CBB37D2B967CBC00F0A3B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB37E2B967CD400F0A3B6 /* DownloadTableViewCell.swift */,
+				D6CBB37F2B967CD400F0A3B6 /* DownloadTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D6CBB3822B967E2800F0A3B6 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3832B967E3500F0A3B6 /* UITableView+Ext.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		D6CBB3852B96868400F0A3B6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3862B96869B00F0A3B6 /* DetailsUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D6CBB38B2B96896500F0A3B6 /* Presentaion */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */,
+				D6CBB3792B967C5800F0A3B6 /* DownloadViewController.swift */,
+			);
+			path = Presentaion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -816,6 +896,7 @@
 				D6724DBC2B926AD900FC6AF7 /* Assets.xcassets in Resources */,
 				D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */,
 				D6724E552B93890600FC6AF7 /* Poppins-Regular.ttf in Resources */,
+				D6CBB3812B967CD400F0A3B6 /* DownloadTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +960,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CBB3892B9688CB00F0A3B6 /* DownloadUseCase.swift in Sources */,
 				D6724E632B938C9A00FC6AF7 /* AppCoordinator.swift in Sources */,
 				D6724DFC2B9277DE00FC6AF7 /* TabBarViewControlle.swift in Sources */,
 				D6CBB3312B962A4F00F0A3B6 /* TrailerUseCase.swift in Sources */,
@@ -890,7 +972,10 @@
 				D6724DF82B92777F00FC6AF7 /* TabBarType.swift in Sources */,
 				D6724E702B93B27F00FC6AF7 /* TrendingTVsSection.swift in Sources */,
 				D6724E0A2B9279DE00FC6AF7 /* +topMostViewController.swift in Sources */,
+				D6CBB3772B96784900F0A3B6 /* CoreManager.swift in Sources */,
 				D6724EA42B94235800FC6AF7 /* TrailerViewModel.swift in Sources */,
+				D6CBB3802B967CD400F0A3B6 /* DownloadTableViewCell.swift in Sources */,
+				D6CBB37A2B967C5800F0A3B6 /* DownloadViewController.swift in Sources */,
 				D6724E3E2B928DD700FC6AF7 /* HeaderCollectionReusableView.swift in Sources */,
 				D6724E202B92885200FC6AF7 /* TrendingMoviesCollectionViewCell.swift in Sources */,
 				D6724E002B92783F00FC6AF7 /* TabBarItem.swift in Sources */,
@@ -899,9 +984,11 @@
 				D6724E592B93890600FC6AF7 /* Fonts.swift in Sources */,
 				D6724E672B938DDC00FC6AF7 /* HomeCoordinator.swift in Sources */,
 				D6724E132B92823700FC6AF7 /* SectionsLayout.swift in Sources */,
+				D6CBB3842B967E3600F0A3B6 /* UITableView+Ext.swift in Sources */,
 				D6724E782B93DF7500FC6AF7 /* TopRatedCollectionViewCell.swift in Sources */,
 				D6724E1A2B9282B500FC6AF7 /* HomeUseCase.swift in Sources */,
 				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
+				D6CBB38D2B96897C00F0A3B6 /* DownloadViewModel.swift in Sources */,
 				D6724E422B928EFD00FC6AF7 /* HomeViewController.swift in Sources */,
 				D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */,
 				D6CBB3742B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld in Sources */,
@@ -917,6 +1004,7 @@
 				D6724E2A2B928AC100FC6AF7 /* HTTPRequestMethod.swift in Sources */,
 				D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */,
 				D6724E932B940A7D00FC6AF7 /* UpcomingSection.swift in Sources */,
+				D6CBB3872B96869B00F0A3B6 /* DetailsUseCase.swift in Sources */,
 				D6724E372B928DA300FC6AF7 /* UICollectionView+Ext.swift in Sources */,
 				D6724E4C2B9386E800FC6AF7 /* UIImageView+Ext.swift in Sources */,
 				D6724E5C2B938C5E00FC6AF7 /* Router.swift in Sources */,
