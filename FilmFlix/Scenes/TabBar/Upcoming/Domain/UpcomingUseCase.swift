@@ -9,6 +9,7 @@ import Foundation
 
 protocol UpcomingUseCaseProtocol {
     func getSectionsLayout(delegate: UpcomingSectionDelegate) async throws -> [any SectionsLayout]
+    func getMovies(with title: String) async throws -> VideoElement
 }
 
 class UpcomingUseCase: UpcomingUseCaseProtocol {
@@ -30,5 +31,9 @@ class UpcomingUseCase: UpcomingUseCaseProtocol {
             sections.append(layout)
         }
         return sections
+    }
+    
+    func getMovies(with title: String) async throws -> VideoElement {
+        try await trendingMoviesAPIService.getMovies(with: title)
     }
 }

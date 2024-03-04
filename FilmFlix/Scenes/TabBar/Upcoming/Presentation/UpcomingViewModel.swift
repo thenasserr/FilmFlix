@@ -12,6 +12,7 @@ class UpcomingViewModel {
     let useCase: UpcomingUseCase
     private let coordinator: UpcomingCoordinatorProtocol
 
+    // MARK: - Initialization
     init(useCase: UpcomingUseCase, coordinator: UpcomingCoordinatorProtocol) {
         self.useCase = useCase
         self.coordinator = coordinator
@@ -25,6 +26,6 @@ class UpcomingViewModel {
 extension UpcomingViewModel: UpcomingSectionDelegate {
     func upcomingSection(_ section: UpcomingSection, didSelect item: Movie) {
         print(item)
-        coordinator.showDetails(movie: item)
+        coordinator.showTrailer(movie: item)
     }
 }
