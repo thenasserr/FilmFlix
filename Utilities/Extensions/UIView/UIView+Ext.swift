@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIView {
+    
+    // MARK: - Custom shape for the details
     func detailsCustomShape() {
         // Set the corner radius for the rounded corners
         let cornerRadius: CGFloat = 25.0
@@ -19,17 +21,28 @@ extension UIView {
         // Move to the starting point and add a quadratic curve for the top-left corner
         path.move(to: CGPoint(x: bounds.minX, y: bounds.minY + ySpace))
         
-        path.addLine(to: CGPoint(x: bounds.minX + xSpace - cornerRadius, y: bounds.minY + ySpace))
-        path.addQuadCurve(to: CGPoint(x: bounds.minX + xSpace, y: bounds.minY + ySpace - cornerRadius), controlPoint: CGPoint(x: bounds.minX + xSpace, y: bounds.minY + ySpace))
+        path.addLine(to: CGPoint(x: bounds.minX + xSpace - cornerRadius, 
+                                 y: bounds.minY + ySpace))
+        path.addQuadCurve(to: CGPoint(x: bounds.minX + xSpace, 
+                                      y: bounds.minY + ySpace - cornerRadius),
+                          controlPoint: CGPoint(x: bounds.minX + xSpace,
+                                                y: bounds.minY + ySpace))
         
-        path.addLine(to: CGPoint(x: bounds.minX + xSpace, y: bounds.minY + cornerRadius))
-        path.addQuadCurve(to: CGPoint(x: bounds.minX + xSpace + cornerRadius, y: bounds.minY), controlPoint: CGPoint(x: bounds.minX + xSpace, y: bounds.minY))
+        path.addLine(to: CGPoint(x: bounds.minX + xSpace, 
+                                 y: bounds.minY + cornerRadius))
+        path.addQuadCurve(to: CGPoint(x: bounds.minX + xSpace + cornerRadius, 
+                                      y: bounds.minY), 
+                          controlPoint: CGPoint(x: bounds.minX + xSpace, y: bounds.minY))
         
         path.addLine(to: CGPoint(x: bounds.maxX - xSpace - cornerRadius, y: bounds.minY))
         path.addQuadCurve(to: CGPoint(x: bounds.maxX - xSpace, y: bounds.minY + cornerRadius), controlPoint: CGPoint(x: bounds.maxX - xSpace, y: bounds.minY))
         
-        path.addLine(to: CGPoint(x: bounds.maxX - xSpace, y: bounds.minY + ySpace - cornerRadius))
-        path.addQuadCurve(to: CGPoint(x: bounds.maxX - xSpace + cornerRadius, y: bounds.minY + ySpace), controlPoint: CGPoint(x: bounds.maxX - xSpace, y: bounds.minY + ySpace))
+        path.addLine(to: CGPoint(x: bounds.maxX - xSpace, 
+                                 y: bounds.minY + ySpace - cornerRadius))
+        path.addQuadCurve(to: CGPoint(x: bounds.maxX - xSpace + cornerRadius, 
+                                      y: bounds.minY + ySpace),
+                          controlPoint: CGPoint(x: bounds.maxX - xSpace,
+                                                y: bounds.minY + ySpace))
         
         path.addLine(to: CGPoint(x: bounds.maxX - cornerRadius, y: bounds.minY + ySpace))
         path.addQuadCurve(to: CGPoint(x: bounds.maxX, y: bounds.minY + ySpace + cornerRadius), controlPoint: CGPoint(x: bounds.maxX, y: bounds.minY + ySpace))
@@ -54,9 +67,7 @@ extension UIView {
         shapeLayer.fillColor = UIColor.red.cgColor
     }
     
-    
-    
-    
+    // MARK: - Custom shape for poster Image
     func posterCustomShape() {
         // Set the corner radius for the rounded corners
         let cornerRadius: CGFloat = 25.0
@@ -80,7 +91,6 @@ extension UIView {
         path.addLine(to: CGPoint(x: bounds.maxX - 55, y: bounds.maxY))
         path.addQuadCurve(to: CGPoint(x: bounds.maxX - 85, y: bounds.maxY - 3), controlPoint: CGPoint(x: bounds.maxX - 85, y: bounds.maxY))
         
-        
         path.addLine(to: CGPoint(x: bounds.maxX - 110, y: bounds.maxY - 40))
         path.addLine(to: CGPoint(x: bounds.maxX - 260, y: bounds.maxY - 40))
         
@@ -98,4 +108,3 @@ extension UIView {
         shapeLayer.fillColor = UIColor.red.cgColor
     }
 }
-
