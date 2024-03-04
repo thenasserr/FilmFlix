@@ -12,7 +12,8 @@ public final class AppRouter: Router {
     
     public required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.navigationBar.titleTextAttributes = [.font: UIFont.h2]
+        navigationController.navigationBar.titleTextAttributes = [.font: UIFont.h2, NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController.navigationBar.tintColor = .black
 
     }
     
