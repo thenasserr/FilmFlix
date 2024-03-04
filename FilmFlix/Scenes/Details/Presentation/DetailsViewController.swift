@@ -11,7 +11,7 @@ class DetailsViewController: UIViewController {
     
     // MARK: - Properties
     var movie: Movie
-    let viewModel: DetailsViewModel
+    private let viewModel: DetailsViewModel
     
     // MARK: - IBOutlets
     @IBOutlet weak var reviewLabel: UILabel!
@@ -71,7 +71,6 @@ class DetailsViewController: UIViewController {
     private func configureDetailsStackView() {
         detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 10, right: 10)
         detailsContainerView.isLayoutMarginsRelativeArrangement = true
-//        detailsContainerView.backgroundColor = .white
         detailsContainerView.detailsCustomShape()
     }
     
@@ -118,7 +117,14 @@ class DetailsViewController: UIViewController {
     
     // MARK: - Buttons Action
     @IBAction func downloadButtonTapped(_ sender: Any) {
-        print("Added to download")
+        Task {
+            do {
+                try await viewModel.saveMovieToDataBase(movie: movie)
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+            } catch {
+                print("error")
+            }
+        }
     }
     
     @IBAction func watchTrailerButtonTapped(_ sender: Any) {
