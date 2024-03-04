@@ -58,13 +58,12 @@ extension UIView {
         
         path.close()
         shapeLayer.path = path.cgPath
-        layer.addSublayer(shapeLayer)
-        layer.masksToBounds = true
+        shapeLayer.fillColor = UIColor.white.cgColor
+        layer.insertSublayer(shapeLayer, at: 0)
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 20, height: 20)
-        layer.shadowRadius = CGFloat(10)
-        layer.mask = shapeLayer
-        shapeLayer.fillColor = UIColor.red.cgColor
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 0.3
     }
     
     // MARK: - Custom shape for poster Image
