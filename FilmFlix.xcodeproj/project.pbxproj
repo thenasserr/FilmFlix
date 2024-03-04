@@ -82,6 +82,7 @@
 		D6CBB32C2B96226D00F0A3B6 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB32B2B96226D00F0A3B6 /* DetailsViewModel.swift */; };
 		D6CBB32E2B9624D800F0A3B6 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB32D2B9624D800F0A3B6 /* DetailsCoordinator.swift */; };
 		D6CBB3312B962A4F00F0A3B6 /* TrailerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3302B962A4F00F0A3B6 /* TrailerUseCase.swift */; };
+		D6CBB3742B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3722B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 		D6CBB32B2B96226D00F0A3B6 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		D6CBB32D2B9624D800F0A3B6 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 		D6CBB3302B962A4F00F0A3B6 /* TrailerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerUseCase.swift; sourceTree = "<group>"; };
+		D6CBB3732B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmFlixModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				D6724DB22B926AD700FC6AF7 /* AppDelegate.swift */,
 				D6724DB42B926AD700FC6AF7 /* SceneDelegate.swift */,
 				D6724DC02B926AD900FC6AF7 /* Info.plist */,
+				D6CBB3722B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld */,
 			);
 			path = FilmFlix;
 			sourceTree = "<group>";
@@ -901,6 +904,7 @@
 				D6724DFE2B92781800FC6AF7 /* TabBar.swift in Sources */,
 				D6724E422B928EFD00FC6AF7 /* HomeViewController.swift in Sources */,
 				D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */,
+				D6CBB3742B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
 				D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */,
 				D6724E1D2B9287DC00FC6AF7 /* TrendingMoviesSection.swift in Sources */,
@@ -1289,6 +1293,19 @@
 			productName = MakeConstraints;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D6CBB3722B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6CBB3732B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodel */,
+			);
+			currentVersion = D6CBB3732B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodel */;
+			path = FilmFlixModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D6724DA72B926AD700FC6AF7 /* Project object */;
 }
