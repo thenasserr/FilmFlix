@@ -24,20 +24,26 @@ class HomeViewModel {
     func getSections() async throws -> [any SectionsLayout] {
         return try await useCase.getSectionLayouts(delegate: self)
     }
+    
+    func viewWillAppear() {
+        coordinator.showTabBar()
+    }
 }
 
 // MARK: - HomeViewModel Sections Delegate Methods
 extension HomeViewModel: HomeSectionsDelegate {
     func topRatedSection(_ section: TopRatedSection, didSelect item: Movie) {
-        print(item)
         coordinator.showDetails(movie: item)
+        coordinator.hideTabBar()
     }
     
     func trendingTVsSection(_ section: TrendingTVsSection, didSelect item: Movie) {
         coordinator.showDetails(movie: item)
+        coordinator.hideTabBar()
     }
     
     func trendingMoviesSection(_ section: TrendingMoviesSection, didSelect item: Movie) {
         coordinator.showDetails(movie: item)
+        coordinator.hideTabBar()
     }
 }

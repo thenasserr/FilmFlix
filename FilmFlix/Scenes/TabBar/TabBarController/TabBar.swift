@@ -44,7 +44,7 @@ class FTabBar: UIView {
     // MARK: - setup subviews
     //
     private func setup() {
-        backgroundColor = .black
+        backgroundColor = .fMainBackground
         heightConstraints(46 + (UIApplication.shared.mainWindow?.safeAreaInsets.bottom ?? 20))
         layer.cornerRadius = 12
         setupStackView()

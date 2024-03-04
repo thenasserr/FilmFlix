@@ -21,10 +21,15 @@ class UpcomingViewModel {
     func getSections() async throws -> [any SectionsLayout] {
         return try await useCase.getSectionsLayout(delegate: self)
     }
+    
+    func viewWillAppear() {
+        coordinator.showTabBar()
+    }
 }
 
 extension UpcomingViewModel: UpcomingSectionDelegate {
     func upcomingSection(_ section: UpcomingSection, didSelect item: Movie) {
         coordinator.showTrailer(movie: item)
+        coordinator.hideTabBar()
     }
 }

@@ -58,8 +58,8 @@ class TrailerViewController: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .black
-        containerView.backgroundColor = .black
+        view.backgroundColor = .fMainBackground
+        containerView.backgroundColor = .fMainBackground
         webView.backgroundColor = .lightGray
         webView.layer.cornerRadius = 10
         configureDownLoadButtonUI()
@@ -78,7 +78,7 @@ class TrailerViewController: UIViewController {
     }
     
     private func configureLabelsUI() {
-        movieTitle.textColor = .white
+        movieTitle.textColor = .black
         movieTitle.font = .h2
         
         overviewLabel.textColor = .lightGray

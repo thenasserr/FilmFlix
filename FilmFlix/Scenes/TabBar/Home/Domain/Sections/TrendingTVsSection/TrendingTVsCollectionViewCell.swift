@@ -43,10 +43,10 @@ class TrendingTVsCollectionViewCell: UICollectionViewCell {
         
         // Adding a custom view to the container with shadow
         containerView.backgroundColor = .white
-        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowColor = UIColor.gray.cgColor
         containerView.layer.shadowOffset = .zero
-        containerView.layer.shadowOpacity = 0.2
-        containerView.layer.shadowRadius = 5
+        containerView.layer.shadowOpacity = 0.3
+        containerView.layer.shadowRadius = 6
         containerView.layer.cornerRadius = 20
     }
     

@@ -27,10 +27,12 @@ class HomeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = L10n.home
-        let titleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = titleAttributes
-        navigationController?.navigationBar.tintColor = .white
         getSections()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
     }
     
     // MARK: - Private Methods
@@ -58,7 +60,7 @@ class HomeViewController: UICollectionViewController {
             section.registerCell(in: self.collectionView)
             section.registerSupplementaryView(in: self.collectionView)
         }
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .fMainBackground
         collectionView.collectionViewLayout = createCompositionalLayout()
         collectionView.reloadData()
     }

@@ -35,13 +35,13 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
             playButton.configuration = nil
             playButton.setTitle("", for: .normal)
             playButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
-            playButton.tintColor = .white
+            playButton.tintColor = .black
         }
     }
     
     private func configureLabelUI() {
         movieTitle.font = .medium
-        movieTitle.textColor = .white
+        movieTitle.textColor = .black
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
