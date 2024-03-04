@@ -13,3 +13,6 @@
 //
 "details.title" = "Details";
 "details.review.title" = "Review";
+//
+"play.download.title" = "Download";
+"play.watchLater.title" = "Watch Later";

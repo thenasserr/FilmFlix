@@ -35,6 +35,16 @@ internal enum L10n {
       internal static let tvs = L10n.tr("Localizable", "home.trending.tvs", fallback: "Trending TVs")
     }
   }
+  internal enum Play {
+    internal enum Download {
+      /// Download
+      internal static let title = L10n.tr("Localizable", "play.download.title", fallback: "Download")
+    }
+    internal enum WatchLater {
+      /// Watch Later
+      internal static let title = L10n.tr("Localizable", "play.watchLater.title", fallback: "Watch Later")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

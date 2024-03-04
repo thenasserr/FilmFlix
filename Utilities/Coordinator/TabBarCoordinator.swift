@@ -16,7 +16,6 @@ protocol TabBarCoordinatorProtocol: Coordinator {
     func showProfile()
 }
 
-
 final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     let viewModel: FTabBarViewModelInterface = FTabBarViewModel.shared

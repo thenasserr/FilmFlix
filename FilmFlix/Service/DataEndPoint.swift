@@ -13,6 +13,7 @@ enum DataEndpoint {
     case fetchPopulars
     case fetchTopRated
     case fetchUpcoming
+    case getMovies
     
     struct Constants {
         static let baseUrl = "https://api.themoviedb.org"
@@ -21,6 +22,8 @@ enum DataEndpoint {
         static let populars = "/3/movie/popular?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
         static let topRated = "/3/movie/top_rated?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
         static let upcoming = "/3/movie/upcoming?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
+        static let youtube = "https://youtube.googleapis.com/youtube/v3/search?"
+
     }
 }
 
@@ -42,6 +45,8 @@ extension DataEndpoint: Endpoint {
                 return Constants.topRated
             case .fetchUpcoming:
                 return Constants.upcoming
+            case .getMovies:
+                return ""
         }
     }
     
@@ -57,6 +62,8 @@ extension DataEndpoint: Endpoint {
                 return .get
             case .fetchUpcoming:
                 return .get
+            case .getMovies:
+                return .get
         }
     }
     
@@ -71,6 +78,8 @@ extension DataEndpoint: Endpoint {
             case .fetchTopRated:
                 return nil
             case .fetchUpcoming:
+                return nil
+            case .getMovies:
                 return nil
         }
     }

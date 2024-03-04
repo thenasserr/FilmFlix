@@ -9,7 +9,7 @@ import Foundation
 
 protocol UpcomingCoordinatorProtocol: Coordinator {
     func showUpcoming()
-    func showDetails(movie: Movie)
+    func showTrailer(movie: Movie)
 }
 
 class UpcomingCoordinator: UpcomingCoordinatorProtocol {
@@ -32,8 +32,11 @@ class UpcomingCoordinator: UpcomingCoordinatorProtocol {
         router.push(viewController)
     }
     
-    func showDetails(movie: Movie) {
-        let viewController = DetailsViewController(movie: movie)
+    func showTrailer(movie: Movie) {
+        let factory = UpcomingFactory()
+        let useCase = UpcomingUseCase(factory: factory)
+        let viewModel = TrailerViewModel(useCase: useCase)
+        let viewController = TrailerViewController(movie: movie, viewModel: viewModel)
         router.push(viewController)
     }
 }

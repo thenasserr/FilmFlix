@@ -13,6 +13,7 @@ protocol MoviesAPI: BaseAPI {
     func fetchPopulars() async throws -> TrendingTitleResponse
     func fetchTopRated() async throws -> TrendingTitleResponse
     func fetchUpcoming() async throws -> TrendingTitleResponse
+    func getMovies(with title: String) async throws -> VideoElement
 }
 
 struct MoviesAPIService: MoviesAPI {
@@ -34,5 +35,9 @@ struct MoviesAPIService: MoviesAPI {
     
     func fetchUpcoming() async throws -> TrendingTitleResponse {
         try await fetch(endpoint: DataEndpoint.fetchUpcoming, type: TrendingTitleResponse.self)
+    }
+    
+    func getMovies(with title: String) async throws -> VideoElement {
+        try await fetchOther(query: title, endpoint: DataEndpoint.getMovies)
     }
 }

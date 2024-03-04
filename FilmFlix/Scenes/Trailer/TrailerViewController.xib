@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrailerViewController" customModule="FilmFlix" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="dA1-DU-zw8" id="mRv-U5-iTv"/>
+                <outlet property="downloadButton" destination="T9u-en-nEt" id="dXd-RO-jue"/>
+                <outlet property="movieTitle" destination="fQ4-sN-Kh7" id="eSZ-at-Uvh"/>
+                <outlet property="overviewLabel" destination="k3j-br-TU7" id="0hB-TC-wKc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="watchLaterButton" destination="bQz-Mp-Zcv" id="RvG-8J-SU9"/>
+                <outlet property="webView" destination="X5I-wO-sEc" id="Zzb-Tt-DtT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-zh-gLt">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dA1-DU-zw8">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="378"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fC5-Jz-T4x">
+                                    <rect key="frame" x="15" y="10" width="363" height="358"/>
+                                    <subviews>
+                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5I-wO-sEc">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="200"/>
+                                            <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="aTK-CF-Pnr"/>
+                                            </constraints>
+                                            <wkWebViewConfiguration key="configuration">
+                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                <wkPreferences key="preferences"/>
+                                            </wkWebViewConfiguration>
+                                        </wkWebView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-SZ-bg9">
+                                            <rect key="frame" x="0.0" y="229.99999999999997" width="363" height="59.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ4-sN-Kh7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3j-br-TU7">
+                                                    <rect key="frame" x="0.0" y="39.333333333333314" width="363" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="REX-VL-IdK">
+                                            <rect key="frame" x="0.0" y="319.66666666666669" width="363" height="38.333333333333314"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-Mp-Zcv" customClass="FilmButton" customModule="FilmFlix" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="38.333333333333336"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="watchLaterButtonTapped:" destination="-1" eventType="touchUpInside" id="RsF-WY-CLY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9u-en-nEt" customClass="FilmButton" customModule="FilmFlix" customModuleProvider="target">
+                                                    <rect key="frame" x="183.66666666666663" y="0.0" width="179.33333333333337" height="38.333333333333336"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="fC5-Jz-T4x" secondAttribute="bottom" constant="10" id="6xb-4V-PMz"/>
+                                <constraint firstAttribute="trailing" secondItem="fC5-Jz-T4x" secondAttribute="trailing" constant="15" id="AON-6z-Vzo"/>
+                                <constraint firstItem="fC5-Jz-T4x" firstAttribute="top" secondItem="dA1-DU-zw8" secondAttribute="top" constant="10" id="ZQa-Nd-kfh"/>
+                                <constraint firstItem="fC5-Jz-T4x" firstAttribute="leading" secondItem="dA1-DU-zw8" secondAttribute="leading" constant="15" id="g45-yg-W6A"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="dA1-DU-zw8" firstAttribute="leading" secondItem="JxS-jr-uQI" secondAttribute="leading" id="6Kc-BW-1X2"/>
+                        <constraint firstItem="dA1-DU-zw8" firstAttribute="bottom" secondItem="JxS-jr-uQI" secondAttribute="bottom" id="Dvg-A4-mko"/>
+                        <constraint firstItem="dA1-DU-zw8" firstAttribute="top" secondItem="JxS-jr-uQI" secondAttribute="top" id="Yrg-1u-kyX"/>
+                        <constraint firstItem="dA1-DU-zw8" firstAttribute="trailing" secondItem="JxS-jr-uQI" secondAttribute="trailing" id="oiN-mS-JfV"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="JxS-jr-uQI"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="m1L-UY-mUX"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xgG-zh-gLt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7Bh-KA-W8e"/>
+                <constraint firstItem="dA1-DU-zw8" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="EGb-xJ-q4O"/>
+                <constraint firstItem="xgG-zh-gLt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="V7h-6M-qLI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xgG-zh-gLt" secondAttribute="trailing" id="ecj-Rd-BDi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xgG-zh-gLt" secondAttribute="bottom" id="kRe-nd-8SQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
