@@ -45,7 +45,8 @@ class UpcomingCoordinator: UpcomingCoordinatorProtocol {
     }
     
     func showTrailer(movie: Movie) {
-        let useCase = TrailerUseCase()
+        let coreManager = CoreManager()
+        let useCase = TrailerUseCase(coreManager: coreManager)
         let viewModel = TrailerViewModel(useCase: useCase)
         let viewController = TrailerViewController(movie: movie, viewModel: viewModel)
         router.push(viewController)

@@ -81,10 +81,10 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
     
     private func downloadViewController() -> UIViewController {
-        let coreManage = CoreManager()
-        let useCase = DownloadUseCase(coreManager: coreManage)
-        let viewModel = DownloadViewModel(useCase: useCase)
-        let viewController = DownloadViewController(viewModel: viewModel)
-        return viewController
+        let navigationController = UINavigationController()
+        let router = AppRouter(navigationController: navigationController)
+        let coordinator = DownloadsCoordinator(router: router, tabBarCoordinator: self)
+        coordinator.start()
+        return navigationController
     }
 }
