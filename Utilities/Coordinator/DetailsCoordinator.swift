@@ -10,6 +10,7 @@ import Foundation
 protocol DetailsCoordinatorProtocol: Coordinator {
     func showDetails(movie: Movie)
     func showTrailer(movie: Movie)
+    func showAlert(item: AlertItem)
 }
 
 class DetailsCoordinator: DetailsCoordinatorProtocol {
@@ -37,5 +38,9 @@ class DetailsCoordinator: DetailsCoordinatorProtocol {
         let viewModel = TrailerViewModel(useCase: useCase)
         let viewController = TrailerViewController(movie: movie, viewModel: viewModel)
         router.push(viewController)
+    }
+    
+    func showAlert(item: AlertItem) {
+        self.router.showAlert(item: item)
     }
 }

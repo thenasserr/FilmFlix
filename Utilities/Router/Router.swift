@@ -26,6 +26,8 @@ public protocol Router {
     func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping () -> Void)
     
     func popToRoot(animated: Bool, completion: @escaping () -> Void)
+    
+    func showAlert(item: AlertItem, completion: @escaping () -> Void)
 }
 
 extension Router {
@@ -59,5 +61,9 @@ extension Router {
     
     func popToRoot(animated: Bool = true, completion: @escaping () -> Void = {}) {
         self.popToRoot(animated: animated, completion: completion)
+    }
+    
+    func showAlert(item: AlertItem, completion: @escaping () -> Void = {}) {
+        self.showAlert(item: item, completion: completion)
     }
 }

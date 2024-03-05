@@ -9,9 +9,11 @@ import UIKit
 
 public final class AppRouter: Router {
     public let navigationController: UINavigationController
-    
-    public required init(navigationController: UINavigationController) {
+    public let alertInterface: AlertInterface & UIViewController
+
+    public required init(navigationController: UINavigationController, alertInterface: AlertInterface & UIViewController) {
         self.navigationController = navigationController
+        self.alertInterface = alertInterface
         navigationController.navigationBar.titleTextAttributes = [.font: UIFont.h2, NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController.navigationBar.tintColor = .black
 
@@ -72,5 +74,11 @@ public final class AppRouter: Router {
     public func popToRoot(animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.popToRootViewController(animated: animated)
         completion()
+    }
+    
+    public func showAlert(item: AlertItem, completion: @escaping () -> Void) {
+        alertInterface.modalTransitionStyle = .coverVertical
+        self.presentOverFullScreen(alertInterface, completion: completion)
+        alertInterface.show(item: item)
     }
 }

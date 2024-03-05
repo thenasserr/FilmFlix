@@ -62,7 +62,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     private func homeViewController() -> UIViewController {
         let navigationController = UINavigationController()
-        let router = AppRouter(navigationController: navigationController)
+        let alertInterface = AlertViewController()
+        let router = AppRouter(navigationController: navigationController, alertInterface: alertInterface)
         let coordinator = HomeCoordinator(router: router, tabBarCoordinator: self)
         coordinator.start()
         return navigationController
@@ -70,7 +71,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     private func upcomingViewController() -> UIViewController {
         let navigationController = UINavigationController()
-        let router = AppRouter(navigationController: navigationController)
+        let alertInterface = AlertViewController()
+        let router = AppRouter(navigationController: navigationController, alertInterface: alertInterface)
         let coordinator = UpcomingCoordinator(router: router, tabBarCoordinator: self)
         coordinator.start()
         return navigationController
@@ -82,7 +84,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     private func downloadViewController() -> UIViewController {
         let navigationController = UINavigationController()
-        let router = AppRouter(navigationController: navigationController)
+        let alertInterface = AlertViewController()
+        let router = AppRouter(navigationController: navigationController, alertInterface: alertInterface)
         let coordinator = DownloadsCoordinator(router: router, tabBarCoordinator: self)
         coordinator.start()
         return navigationController
