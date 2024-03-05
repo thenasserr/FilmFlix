@@ -20,11 +20,11 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-uQ-aYe">
                         <rect key="frame" x="10" y="10" width="356" height="191"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-mX-ADI">
-                                <rect key="frame" x="0.0" y="20.666666666666671" width="100" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-mX-ADI">
+                                <rect key="frame" x="0.0" y="35.666666666666657" width="100" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Qwd-WA-3NZ"/>
-                                    <constraint firstAttribute="height" constant="150" id="qrA-57-WFR"/>
+                                    <constraint firstAttribute="height" constant="120" id="qrA-57-WFR"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="4dX-6y-WVk">

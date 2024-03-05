@@ -34,8 +34,8 @@ class DownloadViewController: UITableViewController {
     
     // MARK: - Private Methods
     private func observeSavedMovies() {
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("downloaded"), object: nil, queue: nil) { _ in
-            self.fetchMoviesFromDataBase()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("downloaded"), object: nil, queue: nil) { [weak self] _ in
+            self?.fetchMoviesFromDataBase()
         }
     }
     

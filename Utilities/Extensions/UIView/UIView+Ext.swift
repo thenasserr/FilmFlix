@@ -60,7 +60,7 @@ extension UIView {
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = UIColor.white.cgColor
         layer.insertSublayer(shapeLayer, at: 0)
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = .zero
         layer.shadowRadius = 8
         layer.shadowOpacity = 0.3

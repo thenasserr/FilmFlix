@@ -31,6 +31,7 @@ class TopRatedCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private Methods
     private func setupUI() {
+        clipsToBounds = false
         movieImage.layer.cornerRadius = 8
         configureContainerView()
         configureLabelsUI()

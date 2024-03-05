@@ -9,27 +9,25 @@ import UIKit
 
 class DownloadTableViewCell: UITableViewCell, Identifiable {
     
+    // MARK: - Properties
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
     
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
+    // MARK: - Setup Method
     func setup(movie: MovieModel) {
         let imageURL = (Constants.imageBase + (movie.poster_path ?? ""))
         movieImage.load(urlString: imageURL)
         movieTitle.text = movie.original_title
     }
     
+    // MARK: - Private Method
     private func configureUI() {
         backgroundColor = .clear
         selectionStyle = .none

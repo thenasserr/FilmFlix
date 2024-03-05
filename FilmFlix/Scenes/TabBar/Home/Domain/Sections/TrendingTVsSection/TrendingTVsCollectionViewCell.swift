@@ -31,6 +31,7 @@ class TrendingTVsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private Methods
     private func setupUI() {
+        clipsToBounds = false
         tvImage.layer.cornerRadius = 8
         configureContainerView()
         configureLabelsUI()

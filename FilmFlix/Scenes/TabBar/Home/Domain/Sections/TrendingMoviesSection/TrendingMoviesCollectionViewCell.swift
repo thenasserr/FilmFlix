@@ -31,6 +31,8 @@ class TrendingMoviesCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private Methods
     private func setupUI() {
+        backgroundColor = .clear
+        clipsToBounds = false
         movieImage.layer.cornerRadius = 8
         configureContainerView()
         configureLabelsUI()

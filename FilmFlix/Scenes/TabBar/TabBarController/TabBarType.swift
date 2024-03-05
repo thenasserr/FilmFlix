@@ -27,7 +27,7 @@ enum FTabBarType: Int, CaseIterable, Hashable {
             case .home: UIImage(systemName: "house")
             case .upcoming: UIImage(systemName: "play.circle")
             case .top: UIImage(systemName: "magnifyingglass.circle")
-            case .download: UIImage(systemName: "arrowtriangle.down.circle")
+            case .download: UIImage(systemName: "arrow.down.circle")
         }
     }
     
@@ -36,7 +36,7 @@ enum FTabBarType: Int, CaseIterable, Hashable {
             case .home: UIImage(systemName: "house.fill")
             case .upcoming: UIImage(systemName: "play.circle.fill")
             case .top: UIImage(systemName: "magnifyingglass.circle.fill")
-            case .download: UIImage(systemName: "arrowtriangle.down.circle.fill")
+            case .download: UIImage(systemName: "arrow.down.circle.fill")
         }
     }
     

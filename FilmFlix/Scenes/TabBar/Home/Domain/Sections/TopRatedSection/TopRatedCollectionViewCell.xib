@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-Fz-oCf">
-                        <rect key="frame" x="5" y="5" width="165" height="280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="290"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JGP-6I-6Ru">
-                                <rect key="frame" x="5" y="0.0" width="155" height="170"/>
+                                <rect key="frame" x="10" y="0.0" width="155" height="170"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-V3-pMo">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="170"/>
@@ -33,16 +33,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-vT-Y7H">
-                                <rect key="frame" x="62" y="170" width="41.333333333333343" height="110"/>
+                                <rect key="frame" x="67" y="170" width="41.333333333333343" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzD-O6-pb7">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0M-5b-hJV">
-                                        <rect key="frame" x="0.0" y="55" width="41.333333333333336" height="55"/>
+                                        <rect key="frame" x="0.0" y="60" width="41.333333333333336" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="aKU-Fz-oCf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="5nj-Vh-27G"/>
-                <constraint firstAttribute="bottom" secondItem="aKU-Fz-oCf" secondAttribute="bottom" constant="5" id="j9M-Qx-3Xg"/>
-                <constraint firstItem="aKU-Fz-oCf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="jYv-BO-xfg"/>
-                <constraint firstAttribute="trailing" secondItem="aKU-Fz-oCf" secondAttribute="trailing" constant="5" id="zgm-Jn-TCR"/>
+                <constraint firstItem="aKU-Fz-oCf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5nj-Vh-27G"/>
+                <constraint firstAttribute="bottom" secondItem="aKU-Fz-oCf" secondAttribute="bottom" id="j9M-Qx-3Xg"/>
+                <constraint firstItem="aKU-Fz-oCf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jYv-BO-xfg"/>
+                <constraint firstAttribute="trailing" secondItem="aKU-Fz-oCf" secondAttribute="trailing" id="zgm-Jn-TCR"/>
             </constraints>
             <size key="customSize" width="175" height="290"/>
             <connections>
