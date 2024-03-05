@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="FilmFlix" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="gJj-nu-sZq" id="FSw-Ve-9j4"/>
+                <outlet property="confirmButton" destination="pTX-uC-B6f" id="zbp-wQ-pFL"/>
+                <outlet property="messageLabel" destination="RJU-lz-FRB" id="eRF-Sv-Mt4"/>
+                <outlet property="titleLabel" destination="fBK-j1-Xgf" id="WQe-T6-rqY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-nu-sZq">
+                    <rect key="frame" x="59" y="351" width="275" height="150"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RqA-bn-IlW">
+                            <rect key="frame" x="10" y="10" width="255" height="130"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBK-j1-Xgf">
+                                    <rect key="frame" x="107" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-lz-FRB">
+                                    <rect key="frame" x="107" y="46" width="41.333333333333343" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTX-uC-B6f">
+                                    <rect key="frame" x="90" y="91.666666666666686" width="75" height="38.333333333333343"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="confirmButtonTapped:" destination="-1" eventType="touchUpInside" id="C0s-c4-Wh4"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="01i-aV-hUs"/>
+                        <constraint firstItem="RqA-bn-IlW" firstAttribute="leading" secondItem="gJj-nu-sZq" secondAttribute="leading" constant="10" id="6bV-Wu-0mK"/>
+                        <constraint firstItem="RqA-bn-IlW" firstAttribute="top" secondItem="gJj-nu-sZq" secondAttribute="top" constant="10" id="FBS-VG-L84"/>
+                        <constraint firstAttribute="trailing" secondItem="RqA-bn-IlW" secondAttribute="trailing" constant="10" id="ZT2-Qv-SOX"/>
+                        <constraint firstAttribute="bottom" secondItem="RqA-bn-IlW" secondAttribute="bottom" constant="10" id="uYM-K7-whE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gJj-nu-sZq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="Gjt-8r-XbG"/>
+                <constraint firstItem="gJj-nu-sZq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oQx-rq-Xac"/>
+                <constraint firstItem="gJj-nu-sZq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ykQ-Vi-VGd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="97" y="20"/>
+        </view>
+    </objects>
+</document>
