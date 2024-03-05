@@ -20,4 +20,8 @@ class TrailerViewModel {
     func getMovies(with title: String) async throws -> VideoElement {
         return try await useCase.getMovies(with: title)
     }
+    
+    func saveMovieToDataBase(movie: Movie) async throws {
+        try await useCase.saveMovieToDatabase(movie: movie)
+    }
 }

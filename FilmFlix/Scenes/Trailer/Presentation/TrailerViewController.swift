@@ -98,6 +98,13 @@ class TrailerViewController: UIViewController {
     }
     
     @IBAction func downloadButtonTapped(_ sender: Any) {
-        print("Added To Downloads..")
+        Task {
+            do {
+                try await viewModel.saveMovieToDataBase(movie: movie)
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+            } catch {
+                print("error")
+            }
+        }
     }
 }

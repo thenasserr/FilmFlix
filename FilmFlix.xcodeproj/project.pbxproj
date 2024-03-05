@@ -91,6 +91,7 @@
 		D6CBB3872B96869B00F0A3B6 /* DetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3862B96869B00F0A3B6 /* DetailsUseCase.swift */; };
 		D6CBB3892B9688CB00F0A3B6 /* DownloadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */; };
 		D6CBB38D2B96897C00F0A3B6 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */; };
+		D6CBB38F2B97628100F0A3B6 /* DownloadsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB38E2B97628100F0A3B6 /* DownloadsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		D6CBB3862B96869B00F0A3B6 /* DetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCase.swift; sourceTree = "<group>"; };
 		D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUseCase.swift; sourceTree = "<group>"; };
 		D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
+		D6CBB38E2B97628100F0A3B6 /* DownloadsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,6 +557,7 @@
 				D6724E642B938D4A00FC6AF7 /* TabBarCoordinator.swift */,
 				D6724E662B938DDC00FC6AF7 /* HomeCoordinator.swift */,
 				D6724E9A2B94121C00FC6AF7 /* UpcomingCoordinator.swift */,
+				D6CBB38E2B97628100F0A3B6 /* DownloadsCoordinator.swift */,
 				D6CBB32D2B9624D800F0A3B6 /* DetailsCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -1012,6 +1015,7 @@
 				D6724E902B94087C00FC6AF7 /* UpcomingCollectionViewCell.swift in Sources */,
 				D6CBB32C2B96226D00F0A3B6 /* DetailsViewModel.swift in Sources */,
 				D6724E972B940C1600FC6AF7 /* UpcomingUseCase.swift in Sources */,
+				D6CBB38F2B97628100F0A3B6 /* DownloadsCoordinator.swift in Sources */,
 				D6724E992B940DF900FC6AF7 /* UpcomingViewModel.swift in Sources */,
 				D6724E292B928AC100FC6AF7 /* EndPoint.swift in Sources */,
 				D6724E2B2B928AC100FC6AF7 /* BaseAPI.swift in Sources */,
