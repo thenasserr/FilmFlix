@@ -7,82 +7,77 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+protocol SearchResultsProtocol {
+    func searchResult(_ collectionView: UICollectionView, didSelect item: Movie)
+}
 
 class SearchResultsViewController: UICollectionViewController {
-
+    
+    var movies: [Movie] = []
+    
+    // MARK: - Initializers
+    init() {
+        super.init(collectionViewLayout: .init())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        configCollectionView()
+        collectionView.backgroundColor = .fMainBackground
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Configuration
+    //
+    /// Configures the collection view properties.
+    private func configCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerNib(TopRatedCollectionViewCell.self)
+        collectionView.collectionViewLayout = createCompositionalLayout()
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    // MARK: - Compositional Layout
+    //
+    /// Creates a compositional layout for the collection view.
+    /// - Returns: A UICollectionViewCompositionalLayout object.
+    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        
+        let interItemSpacing: CGFloat = 15.0
+        let height: CGFloat = 260.0
+        
+        // Item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // Group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(height))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+        
+        group.interItemSpacing = .fixed(interItemSpacing)
+        group.contentInsets.bottom = 15
+        
+        // Section
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 0, leading: 20, bottom: 20, trailing: 20)
+        
+        // Create and return a compositional layout with the defined section.
+        return UICollectionViewCompositionalLayout(section: section)
     }
-
-
+    
+    // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return movies.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        guard let cell: TopRatedCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
+            return UICollectionViewCell()
+        }
+        cell.setup(movie: movies[indexPath.row])
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

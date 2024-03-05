@@ -67,6 +67,12 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "play.watchLater.title", fallback: "Watch Later")
     }
   }
+  internal enum Search {
+    /// Search for a Movie or a Tv show
+    internal static let placeHolder = L10n.tr("Localizable", "search.placeHolder", fallback: "Search for a Movie or a Tv show")
+    /// Search
+    internal static let title = L10n.tr("Localizable", "search.title", fallback: "Search")
+  }
   internal enum Upcoming {
     /// Upcoming
     internal static let title = L10n.tr("Localizable", "upcoming.title", fallback: "Upcoming")

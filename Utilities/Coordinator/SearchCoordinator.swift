@@ -9,6 +9,7 @@ import Foundation
 
 protocol SearchCoordinatorProtocol: Coordinator {
     func showSearch()
+    func showDetails(movie: Movie)
     func showTabBar()
     func hideTabBar()
 }
@@ -36,8 +37,13 @@ class SearchCoordinator: SearchCoordinatorProtocol {
     
     func showSearch() {
         let useCase = SearchUseCase()
-        let viewModel = SearchViewModel(useCase: useCase)
+        let viewModel = SearchViewModel(useCase: useCase, coordinator: self)
         let viewController = SearchViewController(viewModel: viewModel)
         router.push(viewController)
+    }
+    
+    func showDetails(movie: Movie) {
+        let coordinator = DetailsCoordinator(router: router)
+        coordinator.showDetails(movie: movie)
     }
 }

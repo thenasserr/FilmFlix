@@ -25,3 +25,6 @@
 "alert.button.title" = "OK";
 //
 "notificationCenter.name" = "downloaded";
+//
+"search.title" = "Search";
+"search.placeHolder" = "Search for a Movie or a Tv show";

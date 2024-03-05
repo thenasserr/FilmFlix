@@ -13,6 +13,13 @@ class SearchViewController: UICollectionViewController {
     var sections: [any SectionsLayout] = []
     var viewModel: SearchViewModel
         
+    private let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = L10n.Search.placeHolder
+        controller.searchBar.searchBarStyle = .minimal
+        return controller
+    }()
+    
     // MARK: - Initializers
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
@@ -25,7 +32,14 @@ class SearchViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = L10n.Search.title
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
         getSections()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewWillAppear()
     }
     
     // MARK: - Private Methods
@@ -91,5 +105,28 @@ class SearchViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         sections[indexPath.section].collectionView(collectionView, contextMenuConfigurationForItemAt: indexPath, point: point)
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        guard let query = searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              query.trimmingCharacters(in: .whitespaces).count >= 3,
+              let resultsController = searchController.searchResultsController as? SearchResultsViewController else {
+                  return
+              }
+//        resultsController.delegate = self
+        Task {
+            do {
+                let movies = try await viewModel.search(with: query)
+                resultsController.movies = movies
+                resultsController.collectionView.reloadData()
+            } catch {
+                print("errorr")
+            }
+        }
     }
 }
