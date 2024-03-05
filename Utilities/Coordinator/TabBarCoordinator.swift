@@ -12,7 +12,7 @@ protocol TabBarCoordinatorProtocol: Coordinator {
     func hideTabBar()
     func showHome()
     func showUpcoming()
-    func showNotifications()
+    func showSearch()
     func showDownload()
 }
 
@@ -29,7 +29,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         viewModel.viewControllers = [
             homeViewController(),
             upcomingViewController(),
-            notificationViewController(),
+            searchViewController(),
             downloadViewController()
         ]
         let viewControler = FTabBarViewController(viewModel: viewModel)
@@ -52,8 +52,8 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         viewModel.selectedTab = .upcoming
     }
     
-    func showNotifications() {
-        
+    func showSearch() {
+        viewModel.selectedTab = .search
     }
     
     func showDownload() {
@@ -78,8 +78,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         return navigationController
     }
     
-    private func notificationViewController() -> UIViewController {
-        return UIViewController()
+    private func searchViewController() -> UIViewController {
+        let useCase = SearchUseCase()
+        let viewModel = SearchViewModel(useCase: useCase)
+        let viewController = SearchViewController(viewModel: viewModel)
+        return viewController
     }
     
     private func downloadViewController() -> UIViewController {

@@ -10,14 +10,14 @@ import UIKit
 enum FTabBarType: Int, CaseIterable, Hashable {
     case home = 0
     case upcoming
-    case top
+    case search
     case download
     
     private var title: String {
         switch self {
             case .home: "Home"
             case .upcoming: "Upcoming"
-            case .top: "Top"
+            case .search: "Search"
             case .download: "Download"
         }
     }
@@ -26,7 +26,7 @@ enum FTabBarType: Int, CaseIterable, Hashable {
         switch self {
             case .home: UIImage(systemName: "house")
             case .upcoming: UIImage(systemName: "play.circle")
-            case .top: UIImage(systemName: "magnifyingglass.circle")
+            case .search: UIImage(systemName: "magnifyingglass.circle")
             case .download: UIImage(systemName: "arrow.down.circle")
         }
     }
@@ -35,7 +35,7 @@ enum FTabBarType: Int, CaseIterable, Hashable {
         switch self {
             case .home: UIImage(systemName: "house.fill")
             case .upcoming: UIImage(systemName: "play.circle.fill")
-            case .top: UIImage(systemName: "magnifyingglass.circle.fill")
+            case .search: UIImage(systemName: "magnifyingglass.circle.fill")
             case .download: UIImage(systemName: "arrow.down.circle.fill")
         }
     }

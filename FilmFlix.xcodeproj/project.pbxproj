@@ -96,6 +96,10 @@
 		D6CBB3942B97785B00F0A3B6 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CBB3922B97785B00F0A3B6 /* AlertViewController.xib */; };
 		D6CBB3982B9779CD00F0A3B6 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */; };
 		D6CBB39A2B9779F000F0A3B6 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3992B9779F000F0A3B6 /* TypeAliases.swift */; };
+		D6CBB39D2B979E1A00F0A3B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB39C2B979E1A00F0A3B6 /* SearchViewController.swift */; };
+		D6CBB3A02B979F2D00F0A3B6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB39F2B979F2D00F0A3B6 /* SearchViewModel.swift */; };
+		D6CBB3A42B979F6600F0A3B6 /* SearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3A32B979F6600F0A3B6 /* SearchSection.swift */; };
+		D6CBB3A72B97A0DF00F0A3B6 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3A62B97A0DF00F0A3B6 /* SearchUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +212,10 @@
 		D6CBB3922B97785B00F0A3B6 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		D6CBB3992B9779F000F0A3B6 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		D6CBB39C2B979E1A00F0A3B6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D6CBB39F2B979F2D00F0A3B6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D6CBB3A32B979F6600F0A3B6 /* SearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSection.swift; sourceTree = "<group>"; };
+		D6CBB3A62B97A0DF00F0A3B6 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -616,6 +624,7 @@
 				D6724DF52B92775C00FC6AF7 /* TabBarController */,
 				D6724E142B92825700FC6AF7 /* Home */,
 				D6724E872B94080700FC6AF7 /* Upcoming */,
+				D6CBB39B2B979DC900F0A3B6 /* Search */,
 				D6CBB3782B967C0E00F0A3B6 /* Download */,
 			);
 			path = TabBar;
@@ -788,6 +797,49 @@
 				D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		D6CBB39B2B979DC900F0A3B6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3A52B97A09900F0A3B6 /* Data */,
+				D6CBB3A12B979F3500F0A3B6 /* Domain */,
+				D6CBB39E2B979F1A00F0A3B6 /* Presentation */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D6CBB39E2B979F1A00F0A3B6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB39C2B979E1A00F0A3B6 /* SearchViewController.swift */,
+				D6CBB39F2B979F2D00F0A3B6 /* SearchViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D6CBB3A12B979F3500F0A3B6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3A22B979F3A00F0A3B6 /* Section */,
+				D6CBB3A62B97A0DF00F0A3B6 /* SearchUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D6CBB3A22B979F3A00F0A3B6 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3A32B979F6600F0A3B6 /* SearchSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		D6CBB3A52B97A09900F0A3B6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -998,6 +1050,7 @@
 				D6724E702B93B27F00FC6AF7 /* TrendingTVsSection.swift in Sources */,
 				D6724E0A2B9279DE00FC6AF7 /* +topMostViewController.swift in Sources */,
 				D6CBB3772B96784900F0A3B6 /* CoreManager.swift in Sources */,
+				D6CBB3A02B979F2D00F0A3B6 /* SearchViewModel.swift in Sources */,
 				D6724EA42B94235800FC6AF7 /* TrailerViewModel.swift in Sources */,
 				D6CBB3802B967CD400F0A3B6 /* DownloadTableViewCell.swift in Sources */,
 				D6CBB37A2B967C5800F0A3B6 /* DownloadViewController.swift in Sources */,
@@ -1018,14 +1071,17 @@
 				D6724E7D2B93E9B800FC6AF7 /* DetailsViewController.swift in Sources */,
 				D6CBB3742B9674FD00F0A3B6 /* FilmFlixModel.xcdatamodeld in Sources */,
 				D6724DB32B926AD700FC6AF7 /* AppDelegate.swift in Sources */,
+				D6CBB3A72B97A0DF00F0A3B6 /* SearchUseCase.swift in Sources */,
 				D6724E612B938C9000FC6AF7 /* Coordinator.swift in Sources */,
 				D6724E1D2B9287DC00FC6AF7 /* TrendingMoviesSection.swift in Sources */,
 				D6724DF02B926F1600FC6AF7 /* Strings+Generated.swift in Sources */,
 				D6724E9F2B9416C200FC6AF7 /* TrailerViewController.swift in Sources */,
 				D6724E9B2B94121C00FC6AF7 /* UpcomingCoordinator.swift in Sources */,
 				D6724E342B928D1400FC6AF7 /* MoviesAPI.swift in Sources */,
+				D6CBB39D2B979E1A00F0A3B6 /* SearchViewController.swift in Sources */,
 				D6724E952B940B1300FC6AF7 /* UpcomingFactory.swift in Sources */,
 				D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */,
+				D6CBB3A42B979F6600F0A3B6 /* SearchSection.swift in Sources */,
 				D6724E2A2B928AC100FC6AF7 /* HTTPRequestMethod.swift in Sources */,
 				D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */,
 				D6CBB3932B97785B00F0A3B6 /* AlertViewController.swift in Sources */,
