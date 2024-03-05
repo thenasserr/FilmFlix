@@ -92,6 +92,10 @@
 		D6CBB3892B9688CB00F0A3B6 /* DownloadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */; };
 		D6CBB38D2B96897C00F0A3B6 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */; };
 		D6CBB38F2B97628100F0A3B6 /* DownloadsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB38E2B97628100F0A3B6 /* DownloadsCoordinator.swift */; };
+		D6CBB3932B97785B00F0A3B6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3912B97785B00F0A3B6 /* AlertViewController.swift */; };
+		D6CBB3942B97785B00F0A3B6 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CBB3922B97785B00F0A3B6 /* AlertViewController.xib */; };
+		D6CBB3982B9779CD00F0A3B6 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */; };
+		D6CBB39A2B9779F000F0A3B6 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBB3992B9779F000F0A3B6 /* TypeAliases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +204,10 @@
 		D6CBB3882B9688CB00F0A3B6 /* DownloadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUseCase.swift; sourceTree = "<group>"; };
 		D6CBB38C2B96897C00F0A3B6 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		D6CBB38E2B97628100F0A3B6 /* DownloadsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCoordinator.swift; sourceTree = "<group>"; };
+		D6CBB3912B97785B00F0A3B6 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		D6CBB3922B97785B00F0A3B6 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		D6CBB3992B9779F000F0A3B6 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +379,7 @@
 				D6724E112B92822800FC6AF7 /* SectionsLayout */,
 				D6724E082B9279C500FC6AF7 /* UIViewController */,
 				D6724E052B92799200FC6AF7 /* UIApplication */,
+				D6CBB3992B9779F000F0A3B6 /* TypeAliases.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -497,6 +506,7 @@
 		D6724E3A2B928DC800FC6AF7 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				D6CBB3902B97780100F0A3B6 /* Alert */,
 				D6724EA52B9560BF00FC6AF7 /* Buttons */,
 				D6724E3B2B928DD200FC6AF7 /* SupplementaryView */,
 			);
@@ -770,6 +780,16 @@
 			path = Presentaion;
 			sourceTree = "<group>";
 		};
+		D6CBB3902B97780100F0A3B6 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D6CBB3912B97785B00F0A3B6 /* AlertViewController.swift */,
+				D6CBB3922B97785B00F0A3B6 /* AlertViewController.xib */,
+				D6CBB3972B9779CD00F0A3B6 /* AlertItem.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -900,6 +920,7 @@
 				D6724DED2B926C8F00FC6AF7 /* swiftgen.yml in Resources */,
 				D6724E552B93890600FC6AF7 /* Poppins-Regular.ttf in Resources */,
 				D6CBB3812B967CD400F0A3B6 /* DownloadTableViewCell.xib in Resources */,
+				D6CBB3942B97785B00F0A3B6 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,6 +984,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CBB39A2B9779F000F0A3B6 /* TypeAliases.swift in Sources */,
 				D6CBB3892B9688CB00F0A3B6 /* DownloadUseCase.swift in Sources */,
 				D6724E632B938C9A00FC6AF7 /* AppCoordinator.swift in Sources */,
 				D6724DFC2B9277DE00FC6AF7 /* TabBarViewControlle.swift in Sources */,
@@ -1006,6 +1028,7 @@
 				D6724E652B938D4A00FC6AF7 /* TabBarCoordinator.swift in Sources */,
 				D6724E2A2B928AC100FC6AF7 /* HTTPRequestMethod.swift in Sources */,
 				D6724E6D2B93B20C00FC6AF7 /* TrendingTVsCollectionViewCell.swift in Sources */,
+				D6CBB3932B97785B00F0A3B6 /* AlertViewController.swift in Sources */,
 				D6724E932B940A7D00FC6AF7 /* UpcomingSection.swift in Sources */,
 				D6CBB3872B96869B00F0A3B6 /* DetailsUseCase.swift in Sources */,
 				D6724E372B928DA300FC6AF7 /* UICollectionView+Ext.swift in Sources */,
@@ -1016,6 +1039,7 @@
 				D6CBB32C2B96226D00F0A3B6 /* DetailsViewModel.swift in Sources */,
 				D6724E972B940C1600FC6AF7 /* UpcomingUseCase.swift in Sources */,
 				D6CBB38F2B97628100F0A3B6 /* DownloadsCoordinator.swift in Sources */,
+				D6CBB3982B9779CD00F0A3B6 /* AlertItem.swift in Sources */,
 				D6724E992B940DF900FC6AF7 /* UpcomingViewModel.swift in Sources */,
 				D6724E292B928AC100FC6AF7 /* EndPoint.swift in Sources */,
 				D6724E2B2B928AC100FC6AF7 /* BaseAPI.swift in Sources */,

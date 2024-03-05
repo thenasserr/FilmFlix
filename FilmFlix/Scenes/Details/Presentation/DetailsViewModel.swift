@@ -25,4 +25,8 @@ class DetailsViewModel {
     func saveMovieToDataBase(movie: Movie) async throws {
         try await useCase.saveMovieToDatabase(movie: movie)
     }
+    
+    func showAlert(item: AlertItem) {
+        coordinator.showAlert(item: item)
+    }
 }

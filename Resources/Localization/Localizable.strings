@@ -18,3 +18,7 @@
 "upcoming.title" = "Upcoming";
 "play.download.title" = "Download";
 "play.watchLater.title" = "Watch Later";
+//
+"alert.title" = "Success!";
+"alert.message" = "Successfully Added to Downloads";
+"alert.button.title" = "OK";
