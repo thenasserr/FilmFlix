@@ -79,10 +79,12 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
     
     private func searchViewController() -> UIViewController {
-        let useCase = SearchUseCase()
-        let viewModel = SearchViewModel(useCase: useCase)
-        let viewController = SearchViewController(viewModel: viewModel)
-        return viewController
+        let navigationController = UINavigationController()
+        let alertInterface = AlertViewController()
+        let router = AppRouter(navigationController: navigationController, alertInterface: alertInterface)
+        let coordinator = SearchCoordinator(router: router, tabBarCoordinator: self)
+        coordinator.start()
+        return navigationController
     }
     
     private func downloadViewController() -> UIViewController {
