@@ -14,11 +14,12 @@ enum Errors: Error {
 
 protocol BaseAPI {
     func fetch<T>(endpoint: Endpoint, type: T.Type) async throws -> T where T: Decodable
+    func fetchOther(query: String, endpoint: Endpoint) async throws -> VideoElement
 }
 
 extension BaseAPI {
     func fetch<T>(endpoint: Endpoint, type: T.Type) async throws -> T where T: Decodable {
-        //swiftlint:disable all
+        // swiftlint: disable all
         let baseURL = endpoint.baseURL
         let baseAppend = baseURL.appendingPathComponent(endpoint.path).absoluteString.removingPercentEncoding
         let url = URL(string: baseAppend!)
@@ -42,7 +43,6 @@ extension BaseAPI {
             throw URLError(.badURL)
         }
         
-        print(query)
         let url = URL(string: "https://youtube.googleapis.com/youtube/v3/search?q=\(query)&key=AIzaSyDpPT0QVk_Ju9DFO6ow1LM6gqK6hycLAs8")
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = endpoint.method.rawValue

@@ -46,6 +46,7 @@ class TopRatedSection: SectionsLayout {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
         
         group.interItemSpacing = .fixed(interItemSpacing)
+        group.contentInsets.bottom = 15
         
         // Header
         let header = createHeader()

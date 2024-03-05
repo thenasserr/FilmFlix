@@ -11,10 +11,12 @@ class DownloadViewModel {
     
     // MARK: - Properties
     private let useCase: DownloadUseCase
+    private let coordinator: DownloadsCoordinatorProtocol
     
     // MARK: - Initialization
-    init(useCase: DownloadUseCase) {
+    init(useCase: DownloadUseCase, coordinator: DownloadsCoordinatorProtocol) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
    func fetchMoviesFromDataBase() async throws -> [MovieModel] {

@@ -20,3 +20,4 @@ struct Movie: Codable {
     let release_date: String?
     let vote_average: Double
 }
+// swiftlint:enable all

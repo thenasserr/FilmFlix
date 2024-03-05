@@ -40,7 +40,7 @@ class DownloadTableViewCell: UITableViewCell, Identifiable {
         if #available(iOS 15.0, *) {
             playButton.configuration = nil
             playButton.setTitle("", for: .normal)
-            playButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
+            playButton.setImage(UIImage(systemName: "icloud.and.arrow.down"), for: .normal)
             playButton.tintColor = .black
         }
     }

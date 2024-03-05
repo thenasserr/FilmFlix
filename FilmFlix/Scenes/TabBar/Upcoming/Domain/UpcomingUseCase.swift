@@ -13,17 +13,17 @@ protocol UpcomingUseCaseProtocol {
 
 class UpcomingUseCase: UpcomingUseCaseProtocol {
     // MARK: - Properties
-    private let trendingMoviesAPIService: MoviesAPI
+    private let moviesAPIService: MoviesAPI
     private let factory: UpcomingFactory
     
     // MARK: - Initialization
-    init(trendingMoviesAPIService: MoviesAPI = MoviesAPIService(), factory: UpcomingFactory) {
-        self.trendingMoviesAPIService = trendingMoviesAPIService
+    init(moviesAPIService: MoviesAPI = MoviesAPIService(), factory: UpcomingFactory) {
+        self.moviesAPIService = moviesAPIService
         self.factory = factory
     }
     
     func getSectionsLayout(delegate: UpcomingSectionDelegate) async throws -> [any SectionsLayout] {
-        let upcomingMovies = try await trendingMoviesAPIService.fetchUpcoming()
+        let upcomingMovies = try await moviesAPIService.fetchUpcoming()
         var sections: [any SectionsLayout] = []
         
         if let upcomingMovies = upcomingMovies.results {

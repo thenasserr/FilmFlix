@@ -88,7 +88,11 @@ class TrendingMoviesSection: SectionsLayout {
         let config = UIContextMenuConfiguration(
             identifier: nil,
             previewProvider: nil) {[weak self] _ in
-                let downloadAction = UIAction(title: "Download", subtitle: nil, image: UIImage(systemName: "square.and.arrow.down"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                let downloadAction = UIAction(title: "Download", 
+                                              subtitle: nil,
+                                              image: UIImage(systemName: "square.and.arrow.down"),
+                                              identifier: nil,
+                                              discoverabilityTitle: nil, state: .off) { _ in
                     print("Downloaded")
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
