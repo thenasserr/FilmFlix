@@ -69,7 +69,7 @@ class DetailsViewController: UIViewController {
     }
     
     private func configureDetailsStackView() {
-        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 10, right: 10)
+        detailsContainerView.layoutMargins = .init(top: 0, left: 10, bottom: 10, right: 20)
         detailsContainerView.isLayoutMarginsRelativeArrangement = true
         detailsContainerView.detailsCustomShape()
     }
