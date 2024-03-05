@@ -15,6 +15,7 @@ enum DataEndpoint {
     case fetchUpcoming
     case getMovies
     case fetchDiscoverMovies
+    case search
     
     struct Constants {
         static let baseUrl = "https://api.themoviedb.org"
@@ -51,6 +52,8 @@ extension DataEndpoint: Endpoint {
                 return ""
             case .fetchDiscoverMovies:
                 return Constants.discover
+            case .search:
+                return ""
         }
     }
     
@@ -70,6 +73,8 @@ extension DataEndpoint: Endpoint {
                 return .get
             case .fetchDiscoverMovies:
                 return .get
+            case .search:
+                return .get
         }
     }
     
@@ -88,6 +93,8 @@ extension DataEndpoint: Endpoint {
             case .getMovies:
                 return nil
             case .fetchDiscoverMovies:
+                return nil
+            case .search:
                 return nil
         }
     }

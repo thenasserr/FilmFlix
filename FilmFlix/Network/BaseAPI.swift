@@ -10,6 +10,9 @@ import Foundation
 
 enum Errors: Error {
     case invalidDecoding
+    case invalidQuery
+    case invalidURL
+    case failedToGetData
 }
 
 protocol BaseAPI {
@@ -58,5 +61,29 @@ extension BaseAPI {
         }
         
         return videoElement
+    }
+    
+    func search(with query: String, endpoint: Endpoint) async throws -> [Movie] {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+            throw Errors.invalidQuery
+        }
+        
+        guard let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=ad34c2ce43a8071dfe7bb834f3b99937&query=\(query)") else {
+            throw Errors.invalidURL
+        }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = endpoint.method.rawValue
+        endpoint.headers?.forEach {
+            urlRequest.setValue($0.key, forHTTPHeaderField: $0.value)
+        }
+        
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        
+        do {
+            let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+            return results.results ?? []
+        } catch {
+            throw Errors.failedToGetData
+        }
     }
 }
