@@ -10,6 +10,7 @@ import UIKit
 protocol AppCoordinatorProtocol: Coordinator {
     func makeWindow(from windowScene: UIWindowScene)
     func showTabBar()
+    func showAlert(item: AlertItem)
 }
 
 class AppCoordinator: AppCoordinatorProtocol {
@@ -39,5 +40,9 @@ class AppCoordinator: AppCoordinatorProtocol {
         let coordinator = TabBarCoordinator(router: self.router)
         router.reset()
         coordinator.start()
+    }
+    
+    func showAlert(item: AlertItem) {
+        self.router.showAlert(item: item)
     }
 }

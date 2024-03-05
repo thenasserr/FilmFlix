@@ -20,5 +20,8 @@
 "play.watchLater.title" = "Watch Later";
 //
 "alert.title" = "Success!";
-"alert.message" = "Successfully Added to Downloads";
+"alert.message.downloads" = "Added to Downloads";
+"alert.message.watchLater" = "Added to Watch Later";
 "alert.button.title" = "OK";
+//
+"notificationCenter.name" = "downloaded";

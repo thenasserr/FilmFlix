@@ -52,7 +52,6 @@ class TrailerViewController: UIViewController {
     private func fetchMovieTrailer() {
         Task {
             let movie = try await viewModel.getMovies(with: (movie.original_name ?? movie.original_title) ?? "")
-            print(movie)
             configureWebView(model: TitlePreviewViewModel(youtubeView: movie))
         }
     }
@@ -86,7 +85,7 @@ class TrailerViewController: UIViewController {
     }
     
     private func configureWebView(model: TitlePreviewViewModel) {
-        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else {
+        guard let url = URL(string: "\(Constants.youTube)\(model.youtubeView.id.videoId)") else {
             return
         }
         webView.load(URLRequest(url: url))
@@ -94,14 +93,19 @@ class TrailerViewController: UIViewController {
     
     // MARK: - Buttons Action
     @IBAction func watchLaterButtonTapped(_ sender: Any) {
-        print("Added To Watch Later..")
+        AppCoordinator.shared.showAlert(item: .init(message: L10n.Alert.Message.watchLater, buttonTitle: L10n.Alert.Button.title))
     }
     
     @IBAction func downloadButtonTapped(_ sender: Any) {
+        saveMovieToDataBase()
+    }
+    
+    private func saveMovieToDataBase() {
         Task {
             do {
                 try await viewModel.saveMovieToDataBase(movie: movie)
-                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(L10n.NotificationCenter.name), object: nil)
+                AppCoordinator.shared.showAlert(item: .init(message: L10n.Alert.Message.downloads, buttonTitle: L10n.Alert.Button.title))
             } catch {
                 print("error")
             }

@@ -9,4 +9,5 @@ import Foundation
 
 struct Constants {
     static let imageBase = "https://image.tmdb.org/t/p/w500"
+    static let youTube = "https://www.youtube.com/embed/"
 }

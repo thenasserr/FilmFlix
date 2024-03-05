@@ -120,8 +120,8 @@ class DetailsViewController: UIViewController {
         Task {
             do {
                 try await viewModel.saveMovieToDataBase(movie: movie)
-                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
-                viewModel.showAlert(item: .init(message: L10n.Alert.message, buttonTitle: L10n.Alert.Button.title))
+                NotificationCenter.default.post(name: NSNotification.Name(L10n.NotificationCenter.name), object: nil)
+                viewModel.showAlert(item: .init(message: L10n.Alert.Message.downloads, buttonTitle: L10n.Alert.Button.title))
             } catch {
                 print("error")
             }

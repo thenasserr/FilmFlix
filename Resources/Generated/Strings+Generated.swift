@@ -16,13 +16,17 @@ internal enum L10n {
   ///   Created by Ibrahim Nasser Ibrahim on 01/03/2024.
   internal static let home = L10n.tr("Localizable", "home", fallback: "Home")
   internal enum Alert {
-    /// Successfully Added to Downloads
-    internal static let message = L10n.tr("Localizable", "alert.message", fallback: "Successfully Added to Downloads")
     /// Success!
     internal static let title = L10n.tr("Localizable", "alert.title", fallback: "Success!")
     internal enum Button {
       /// OK
       internal static let title = L10n.tr("Localizable", "alert.button.title", fallback: "OK")
+    }
+    internal enum Message {
+      /// Added to Downloads
+      internal static let downloads = L10n.tr("Localizable", "alert.message.downloads", fallback: "Added to Downloads")
+      /// Added to Watch Later
+      internal static let watchLater = L10n.tr("Localizable", "alert.message.watchLater", fallback: "Added to Watch Later")
     }
   }
   internal enum Details {
@@ -48,6 +52,10 @@ internal enum L10n {
       /// Trending TVs
       internal static let tvs = L10n.tr("Localizable", "home.trending.tvs", fallback: "Trending TVs")
     }
+  }
+  internal enum NotificationCenter {
+    /// downloaded
+    internal static let name = L10n.tr("Localizable", "notificationCenter.name", fallback: "downloaded")
   }
   internal enum Play {
     internal enum Download {
