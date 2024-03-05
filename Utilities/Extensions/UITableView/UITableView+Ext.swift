@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UITableView: Identifiable { }
 
 extension UITableView {

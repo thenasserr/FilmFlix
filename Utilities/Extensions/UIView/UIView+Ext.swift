@@ -91,10 +91,10 @@ extension UIView {
         path.addQuadCurve(to: CGPoint(x: bounds.maxX - 85, y: bounds.maxY - 3), controlPoint: CGPoint(x: bounds.maxX - 85, y: bounds.maxY))
         
         path.addLine(to: CGPoint(x: bounds.maxX - 110, y: bounds.maxY - 40))
-        path.addLine(to: CGPoint(x: bounds.maxX - 260, y: bounds.maxY - 40))
+        path.addLine(to: CGPoint(x: bounds.maxX - 280, y: bounds.maxY - 40))
         
-        path.addLine(to: CGPoint(x: bounds.maxX - 280, y: bounds.maxY - 3))
-        path.addQuadCurve(to: CGPoint(x: bounds.maxX - 300, y: bounds.maxY), controlPoint: CGPoint(x: bounds.maxX - 280, y: bounds.maxY))
+        path.addLine(to: CGPoint(x: bounds.maxX - 300, y: bounds.maxY - 3))
+        path.addQuadCurve(to: CGPoint(x: bounds.maxX - 320, y: bounds.maxY), controlPoint: CGPoint(x: bounds.maxX - 300, y: bounds.maxY))
         
         path.addLine(to: CGPoint(x: bounds.minX + cornerRadius, y: bounds.maxY))
         path.addQuadCurve(to: CGPoint(x: bounds.minX, y: bounds.maxY - cornerRadius), controlPoint: CGPoint(x: bounds.minX, y: bounds.maxY))
