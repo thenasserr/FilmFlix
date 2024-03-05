@@ -44,7 +44,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n38-cl-Pyr">
                                             <rect key="frame" x="17.333333333333343" y="0.0" width="389.33333333333326" height="400"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-pl-hjM">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-pl-hjM">
                                                     <rect key="frame" x="0.0" y="0.0" width="389.33333333333331" height="400"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="400" id="vh3-NJ-Vne"/>
@@ -59,7 +59,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="389.33333333333331" height="80"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-ju-JCn">
-                                                            <rect key="frame" x="29" y="0.0" width="331.33333333333337" height="59.666666666666664"/>
+                                                            <rect key="frame" x="29" y="0.0" width="331.33333333333331" height="59.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7V-V5-FZz">
