@@ -9,6 +9,7 @@ import Foundation
 
 protocol SearchUseCaseProtocol {
     func getSectionsLayout(delegate: SearchSectionDelegate) async throws -> [any SectionsLayout]
+    func search(with title: String) async throws -> [Movie]
 }
 
 class SearchUseCase: SearchUseCaseProtocol {
@@ -29,5 +30,9 @@ class SearchUseCase: SearchUseCaseProtocol {
             sections.append(layout)
         }
         return sections
+    }
+    
+    func search(with title: String) async throws -> [Movie] {
+        try await moviesAPIService.search(with: title)
     }
 }
