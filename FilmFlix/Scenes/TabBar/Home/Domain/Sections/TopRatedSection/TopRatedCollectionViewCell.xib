@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="175" height="290"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JGP-6I-6Ru">
-                                <rect key="frame" x="10" y="0.0" width="155" height="170"/>
+                                <rect key="frame" x="17.666666666666671" y="0.0" width="140" height="170"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-V3-pMo">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="170"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-V3-pMo">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="155" id="agi-4C-l2O"/>
+                                            <constraint firstAttribute="width" constant="140" id="agi-4C-l2O"/>
                                             <constraint firstAttribute="height" constant="170" id="ung-nA-4O8"/>
                                         </constraints>
                                     </imageView>
