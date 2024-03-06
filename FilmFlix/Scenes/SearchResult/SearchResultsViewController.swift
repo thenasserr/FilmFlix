@@ -13,6 +13,7 @@ protocol SearchResultsProtocol {
 
 class SearchResultsViewController: UICollectionViewController {
     
+    // MARK: - Properties
     var movies: [Movie] = []
     
     // MARK: - Initializers
@@ -36,7 +37,7 @@ class SearchResultsViewController: UICollectionViewController {
     private func configCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerNib(TopRatedCollectionViewCell.self)
+        collectionView.registerNib(SearchCollectionViewCell.self)
         collectionView.collectionViewLayout = createCompositionalLayout()
     }
     
@@ -74,10 +75,14 @@ class SearchResultsViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: TopRatedCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
+        guard let cell: SearchCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
         cell.setup(movie: movies[indexPath.row])
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = movies[indexPath.row]
     }
 }

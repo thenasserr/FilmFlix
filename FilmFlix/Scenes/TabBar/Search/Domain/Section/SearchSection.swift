@@ -76,7 +76,7 @@ class SearchSection: SectionsLayout {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell: TopRatedCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
+        guard let cell: SearchCollectionViewCell = collectionView.dequeue(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
         cell.setup(movie: items[indexPath.row])
@@ -124,7 +124,7 @@ class SearchSection: SectionsLayout {
     }
     
     func registerCell(in collectionView: UICollectionView) {
-        collectionView.registerNib(TopRatedCollectionViewCell.self)
+        collectionView.registerNib(SearchCollectionViewCell.self)
     }
     
     func registerSupplementaryView(in collectionView: UICollectionView) {

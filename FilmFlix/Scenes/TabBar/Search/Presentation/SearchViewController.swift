@@ -118,7 +118,6 @@ extension SearchViewController: UISearchResultsUpdating {
               let resultsController = searchController.searchResultsController as? SearchResultsViewController else {
                   return
               }
-//        resultsController.delegate = self
         Task {
             do {
                 let movies = try await viewModel.search(with: query)
