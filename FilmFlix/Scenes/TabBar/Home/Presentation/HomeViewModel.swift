@@ -32,6 +32,10 @@ class HomeViewModel {
 
 // MARK: - HomeViewModel Sections Delegate Methods
 extension HomeViewModel: HomeSectionsDelegate {
+    func deepTouch(_ section: TrendingMoviesSection?, didSelect item: Movie) {
+        coordinator.showAlert(item: .init(message: L10n.Alert.Message.downloads, buttonTitle: L10n.Alert.Button.title))
+    }
+    
     func topRatedSection(_ section: TopRatedSection, didSelect item: Movie) {
         coordinator.showDetails(movie: item)
         coordinator.hideTabBar()

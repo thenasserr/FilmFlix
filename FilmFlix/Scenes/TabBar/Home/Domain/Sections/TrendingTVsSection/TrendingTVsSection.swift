@@ -87,7 +87,7 @@ class TrendingTVsSection: SectionsLayout {
                         point: CGPoint) -> UIContextMenuConfiguration? {
         let config = UIContextMenuConfiguration(
             identifier: nil,
-            previewProvider: nil) {[weak self] _ in
+            previewProvider: nil) { _ in
                 let downloadAction = UIAction(title: "Download", subtitle: nil, 
                                               image: UIImage(systemName: "square.and.arrow.down"),
                                               identifier: nil, discoverabilityTitle: nil, state: .off) { _ in

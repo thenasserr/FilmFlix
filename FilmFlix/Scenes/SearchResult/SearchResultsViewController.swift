@@ -84,5 +84,6 @@ class SearchResultsViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = movies[indexPath.row]
+        print(item)
     }
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// swiftlint: disable all
 struct Constants {
     static let baseUrl = "https://api.themoviedb.org"
     static let moviesPath = "/3/trending/movie/day?api_key=ad34c2ce43a8071dfe7bb834f3b99937"
@@ -19,3 +20,4 @@ struct Constants {
     static let imageBase = "https://image.tmdb.org/t/p/w500"
     static let youTube = "https://www.youtube.com/embed/"
 }
+// swiftlint: enable all

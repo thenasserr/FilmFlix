@@ -12,6 +12,7 @@ protocol HomeCoordinatorProtocol: Coordinator {
     func showDetails(movie: Movie)
     func showTabBar()
     func hideTabBar()
+    func showAlert(item: AlertItem)
 }
 
 class HomeCoordinator: HomeCoordinatorProtocol {
@@ -47,5 +48,9 @@ class HomeCoordinator: HomeCoordinatorProtocol {
     func showDetails(movie: Movie) {
         let coordinator = DetailsCoordinator(router: router)
         coordinator.showDetails(movie: movie)
+    }
+    
+    func showAlert(item: AlertItem) {
+        self.router.showAlert(item: item)
     }
 }

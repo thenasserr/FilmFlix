@@ -93,7 +93,7 @@ class TopRatedSection: SectionsLayout {
                         point: CGPoint) -> UIContextMenuConfiguration? {
         let config = UIContextMenuConfiguration(
             identifier: nil,
-            previewProvider: nil) {[weak self] _ in
+            previewProvider: nil) { _ in
                 let downloadAction = UIAction(title: "Download",
                                               subtitle: nil,
                                               image: UIImage(systemName: "square.and.arrow.down"),

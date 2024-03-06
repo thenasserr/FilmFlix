@@ -93,7 +93,7 @@ class SearchSection: SectionsLayout {
                         point: CGPoint) -> UIContextMenuConfiguration? {
         let config = UIContextMenuConfiguration(
             identifier: nil,
-            previewProvider: nil) {[weak self] _ in
+            previewProvider: nil) { _ in
                 let downloadAction = UIAction(title: "Download",
                                               subtitle: nil,
                                               image: UIImage(systemName: "square.and.arrow.down"),
@@ -103,7 +103,6 @@ class SearchSection: SectionsLayout {
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }
-        
         return config
     }
     

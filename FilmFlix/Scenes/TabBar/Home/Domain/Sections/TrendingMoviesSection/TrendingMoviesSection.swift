@@ -9,6 +9,7 @@ import UIKit
 
 protocol TrendingMoviesSectionDelegate: AnyObject {
     func trendingMoviesSection(_ section: TrendingMoviesSection, didSelect item: Movie)
+    func deepTouch(_ section: TrendingMoviesSection?, didSelect item: Movie)
 }
 
 class TrendingMoviesSection: SectionsLayout {
@@ -85,15 +86,16 @@ class TrendingMoviesSection: SectionsLayout {
     func collectionView(_ collectionView: UICollectionView,
                         contextMenuConfigurationForItemAt indexPath: IndexPath,
                         point: CGPoint) -> UIContextMenuConfiguration? {
+        let item = items[indexPath.item]
         let config = UIContextMenuConfiguration(
             identifier: nil,
             previewProvider: nil) {[weak self] _ in
-                let downloadAction = UIAction(title: "Download", 
+                let downloadAction = UIAction(title: "Download",
                                               subtitle: nil,
                                               image: UIImage(systemName: "square.and.arrow.down"),
                                               identifier: nil,
                                               discoverabilityTitle: nil, state: .off) { _ in
-                    print("Downloaded")
+                    self?.delegate?.deepTouch(self, didSelect: item)
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }
