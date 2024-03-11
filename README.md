@@ -34,3 +34,7 @@ Contributions are welcome! If you have any ideas for new features, improvements,
 ## Repository 📁
 
 [Link to FilmFlix Repository](https://github.com/thenasserr/FilmFlix.git)
+
+<img src="https://github.com/thenasserr/FilmFlix/assets/125792463/ebb63ee5-ffe0-4f14-a7b7-1b334cdd55ee" width="300" height="700">
+<img src="https://github.com/thenasserr/FilmFlix/assets/125792463/242aa0f2-4ad9-49bc-b73a-75b7d8d226df" width="300" height="700">
+<img src="https://github.com/thenasserr/FilmFlix/assets/125792463/74f43ce2-0ea6-41ac-861d-7a51d0267ef1" width="300" height="700">
